@@ -1,0 +1,6 @@
+@import "main"; //or path relative to the component location
+
+h1 {
+  color: $brand-color;
+  background-color: $grey-color-light;
+}
