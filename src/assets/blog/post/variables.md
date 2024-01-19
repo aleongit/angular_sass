@@ -3,7 +3,7 @@ Think of variables as a way to store information that you want to reuse througho
 
 
 SCSS
-```
+```scss
 $font-stack: Helvetica, sans-serif;
 $primary-color: #333;
 
@@ -14,7 +14,7 @@ body {
 ```
 
 CSS
-```
+```css
 body {
   font: 100% Helvetica, sans-serif;
   color: #333;
