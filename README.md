@@ -180,9 +180,10 @@ A route /blog/post/name-of-the-article
 
 
 
-### How to Build a Blog with Analog and Angular
+### Blog with Analog
 - https://dev.to/analogjs/how-to-build-a-blog-with-analog-and-angular-4pk2
 - https://daviddalbusco.medium.com/add-a-blog-to-your-angular-website-using-markdown-files-31cdb0627bdd
+- https://www.makeuseof.com/angular-markdown-files-website/
 
 
 ### ngx-markdown
