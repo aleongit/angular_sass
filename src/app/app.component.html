@@ -1,2 +1,10 @@
 <h1>{{ title }} works!</h1>
+
+<!-- static markdown -->
+<markdown ngPreserveWhitespaces> # Markdown </markdown>
+
+<!-- loaded from remote url -->
+<markdown [disableSanitizer]="true" [src]="'assets/blog/post/variables.md'">
+</markdown>
+
 <router-outlet />
