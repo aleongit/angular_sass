@@ -1,15 +1,15 @@
 import { Component } from '@angular/core';
-import { RouterLink } from '@angular/router';
 import { POSTS } from '../../utils/constants';
+import { RouterLink } from '@angular/router';
 import { NgFor } from '@angular/common';
 
 @Component({
-  selector: 'app-blog',
+  selector: 'app-nav',
   standalone: true,
   imports: [RouterLink, NgFor],
-  templateUrl: './blog.component.html',
-  styleUrl: './blog.component.scss',
+  templateUrl: './nav.component.html',
+  styleUrl: './nav.component.scss',
 })
-export class BlogComponent {
+export class NavComponent {
   posts = POSTS;
 }

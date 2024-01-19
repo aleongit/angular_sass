@@ -187,7 +187,6 @@ A route /blog/post/name-of-the-article
 
 
 
-
 ### Sass guides
 - https://www.freecodecamp.org/news/the-beginners-guide-to-sass/
 - https://www.eniun.com/tutorial-sass/
