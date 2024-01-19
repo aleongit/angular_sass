@@ -13,20 +13,15 @@ TODO:
 ## Requeriments / Prerequisites
 
 🖥️ node -v
-```
 → v20.9.0
-```
 
 🖥️ npm -v
-```
 → 10.2.1
-```
 
 🖥️ ng version
-```
 → Angular CLI: 17.1.0
 → Angular: 17.1.0
-```
+
 
 
 ## Dependencies
