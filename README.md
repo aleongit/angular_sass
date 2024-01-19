@@ -62,7 +62,45 @@ TODO:
 
 ## Project Steps
 
-TODO:
+- create new angular app with scss styles
+```
+ng new angular_sass --style=scss
+? Do you want to enable Server-Side Rendering (SSR) and Static Site Generation (SSG/Prerendering)? No
+```
+
+- create files structure, for example:
+```
+|- src/
+    |- sass/
+        |- _variables.scss
+        |- _mixins.scss
+        |- _main.scss
+    |- styles.scss
+```
+
+- configure sass path in `angular.json` [project-name > architect > build > options]
+```
+"styles": ["src/styles.scss"],
+"stylePreprocessorOptions": {
+    "includePaths": ["src", "src/sass"]
+},
+```
+
+- import sass files into the main `/src/styles.scss`
+```
+@import "main";
+@import "variables";
+@import "mixins";
+```
+
+- import sass files into Angular Components
+```
+// src/app/app.component.scss
+
+@import 'variables';
+
+// now we can use those variables!
+```
 
 
 
@@ -83,6 +121,18 @@ TODO:
 - https://update.angular.io/
 - https://www.geeksforgeeks.org/how-to-update-angular-projects-to-the-latest-version/
 - - https://www.dongee.com/tutoriales/como-actualizar-angular-a-la-ultima-version/
+
+
+### Angular with Sass
+- https://www.geeksforgeeks.org/how-do-you-create-application-to-use-scss/
+- https://www.digitalocean.com/community/tutorials/using-sass-with-the-angular-cli
+
+
+### Angular-cli and Global SASS Variables
+- https://netbasal.com/angular-cli-and-global-sass-variables-a1b92d8ca9b7
+
+
+
 
 
 
