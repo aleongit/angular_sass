@@ -28,7 +28,8 @@ TODO:
 ## Dependencies
 
 - angular 17
-- npm install ngx-markdown marked@^9.0.0 --save
+- npm install ngx-markdown marked --save
+- npm install prismjs --save
 
 
 
@@ -109,7 +110,20 @@ ng new angular_sass --style=scss
 
 ## Project Steps - Angular using markdown files
 
-- install ngx-markdown `npm install ngx-markdown --save`
+- install ngx-markdown `npm install ngx-markdown marked --save`
+- install Prism.js library for Syntax highlight `npm install prismjs --save`
+- include Prism.js in `angular.json`
+```
+"styles": [
+  "styles.css",
++ "node_modules/prismjs/themes/prism-okaidia.css"
+],
+"scripts": [
++ "node_modules/prismjs/prism.js",
++ "node_modules/prismjs/components/prism-csharp.min.js",
++ "node_modules/prismjs/components/prism-css.min.js"
+]
+```
 
 - contents in *assets**
 ```
@@ -143,7 +157,7 @@ A route /blog/post/name-of-the-article
 - https://angular.io/guide/updating
 - https://update.angular.io/
 - https://www.geeksforgeeks.org/how-to-update-angular-projects-to-the-latest-version/
-- - https://www.dongee.com/tutoriales/como-actualizar-angular-a-la-ultima-version/
+- https://www.dongee.com/tutoriales/como-actualizar-angular-a-la-ultima-version/
 
 
 
