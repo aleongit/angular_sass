@@ -7,6 +7,8 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 
 TODO:
 - Test sass in Angular 17
+- Test ngx-markdown
+- Angular 17: Getting started with standalone components
 
 
 
@@ -26,6 +28,7 @@ TODO:
 ## Dependencies
 
 - angular 17
+- npm install ngx-markdown marked@^9.0.0 --save
 
 
 
@@ -60,7 +63,7 @@ TODO:
 
 
 
-## Project Steps
+## Project Steps - Angular with Sass
 
 - create new angular app with scss styles
 ```
@@ -104,6 +107,26 @@ ng new angular_sass --style=scss
 
 
 
+## Project Steps - Angular using markdown files
+
+- install ngx-markdown `npm install ngx-markdown --save`
+
+- contents in *assets**
+```
+assets > blog > blog.md: the list of blog entries
+assets > blog > post > *.md: the articles (= blog posts)
+```
+
+- routes
+```
+A route /blog which will display a list of all articles
+A route /blog/post/name-of-the-article
+```
+
+
+
+
+
 ## Update Angular version
 - Node and npm installed and updated
 - clean old modules in npm `npm uninstall *`
@@ -123,6 +146,17 @@ ng new angular_sass --style=scss
 - - https://www.dongee.com/tutoriales/como-actualizar-angular-a-la-ultima-version/
 
 
+
+### Angular - Getting started with standalone components
+- https://angular.io/guide/standalone-components
+
+
+
+### Angular 17
+- https://medium.com/@brocco/angular-17-what-does-that-mean-for-you-49fcacec3bb2
+
+
+
 ### Angular with Sass
 - https://www.geeksforgeeks.org/how-do-you-create-application-to-use-scss/
 - https://www.digitalocean.com/community/tutorials/using-sass-with-the-angular-cli
@@ -133,30 +167,27 @@ ng new angular_sass --style=scss
 
 
 
+### Sass
+- https://sass-lang.com/
+- https://sass-lang.com/guide/
 
 
 
 
-## Development server
+### Sass guides
+- https://www.freecodecamp.org/news/the-beginners-guide-to-sass/
+- https://www.eniun.com/tutorial-sass/
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
 
-## Code scaffolding
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+### How to Build a Blog with Analog and Angular
+- https://dev.to/analogjs/how-to-build-a-blog-with-analog-and-angular-4pk2
+- https://daviddalbusco.medium.com/add-a-blog-to-your-angular-website-using-markdown-files-31cdb0627bdd
 
-## Build
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+### ngx-markdown
+- https://github.com/jfcere/ngx-markdown
+- https://jfcere.github.io/ngx-markdown/get-started#usage
 
-## Running unit tests
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
 
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
