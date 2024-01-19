@@ -19,7 +19,6 @@ TODO:
 → 10.2.1
 
 🖥️ ng version
-→ Angular CLI: 17.1.0
 → Angular: 17.1.0
 
 
@@ -42,6 +41,7 @@ TODO:
 
 ## Dev environment
 
+- angular 17
 - node v20.9.0
 - npm 10.2.1
 - Visual Studio Code 1.85.1
