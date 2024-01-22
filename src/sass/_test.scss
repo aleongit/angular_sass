@@ -1,0 +1,10 @@
+@debug "test debug";
+@debug 1px == 1px; // true
+//@warn "this feature is deprecated and not used in future";
+@debug 10s + 15s; // 25s
+@debug 1in - 10px; // 0.8958333333in
+@debug 5px * 3px; // 15px*px
+@debug 1in % 9px; // 0.0625in
+@debug "test debug";
+
+
