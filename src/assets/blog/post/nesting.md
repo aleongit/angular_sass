@@ -41,4 +41,4 @@ nav a {
 }
 ```
 
-You’ll notice that the *ul*, *li*, and a *selectors* are nested inside the nav selector. This is a great way to organize your CSS and make it more readable.
+You’ll notice that the *ul*, *li*, and *a* selectors are nested inside the nav selector. This is a great way to organize your CSS and make it more readable.
