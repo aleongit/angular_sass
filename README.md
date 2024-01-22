@@ -125,7 +125,7 @@ ng new angular_sass --style=scss
 ]
 ```
 
-- contents in *assets**
+- contents in *assets*
 ```
 assets > blog > blog.md: the list of blog entries
 assets > blog > post > *.md: the articles (= blog posts)
