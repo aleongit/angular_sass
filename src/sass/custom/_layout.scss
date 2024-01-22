@@ -44,6 +44,8 @@
 .site-nav {
   margin: $margin-default;
   line-height: $base-line-height * $base-font-size * 2.25;
+  display: flex;
+  flex-wrap: wrap;
 
   .menu-icon {
     display: none;
@@ -111,9 +113,9 @@
   max-width: 275px;
   min-width: 275px;
   height: 250px;
-  
+
   @include relative-font-size(1.5);
-  
+
   @include media-query($on-palm) {
     max-width: none;
     min-width: none;
