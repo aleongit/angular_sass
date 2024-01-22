@@ -26,6 +26,6 @@ export const POSTS: Post[] = [
     id: 'modules',
     title: 'Modules',
     description:
-      'You don’t have to write all your Sass in a single file. You can split it up however you want with the @use rule',
+      'You don’t have to write all your Sass in a single file',
   },
 ];
