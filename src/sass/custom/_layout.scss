@@ -90,6 +90,7 @@
   margin-left: 0;
   list-style: none;
   display: flex;
+  flex-wrap: wrap;
 
   > li {
     float: left;
@@ -107,13 +108,15 @@
   padding: $spacing-unit;
   background-color: aliceblue;
   border-radius: 30px;
-  max-width: 300px;
-  height: 200px;
+  max-width: 275px;
+  min-width: 275px;
+  height: 250px;
   
   @include relative-font-size(1.5);
   
   @include media-query($on-palm) {
     max-width: none;
+    min-width: none;
     height: auto;
   }
 
