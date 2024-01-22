@@ -13,6 +13,9 @@ body {
   font: 100% $font-stack;
   color: $primary-color;
 }
+```
+
+```css
 // styles.scss
 @use 'base';
 

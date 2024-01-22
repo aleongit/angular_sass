@@ -25,7 +25,12 @@ export const POSTS: Post[] = [
   {
     id: 'modules',
     title: 'Modules',
+    description: 'You don’t have to write all your Sass in a single file',
+  },
+  {
+    id: 'mixins',
+    title: 'Mixins',
     description:
-      'You don’t have to write all your Sass in a single file',
+      'A mixin lets you make groups of CSS declarations that you want to reuse throughout your site',
   },
 ];
