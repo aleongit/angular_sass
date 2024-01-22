@@ -5,8 +5,8 @@ Sass will let you nest your CSS selectors in a way that follows the same visual 
 
 With that in mind, here’s an example of some typical styles for a site’s navigation:
 
-SCSSS
-```scss
+SCSS
+```css
 nav {
   ul {
     margin: 0;
