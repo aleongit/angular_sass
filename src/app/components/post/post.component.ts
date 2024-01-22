@@ -1,14 +1,12 @@
-import { Component } from '@angular/core';
+import { Component, OnInit, SecurityContext } from '@angular/core';
 import {
   RouterOutlet,
   Router,
   ActivatedRoute,
   ParamMap,
 } from '@angular/router';
-import { switchMap } from 'rxjs/operators';
 import { MarkdownModule, provideMarkdown } from 'ngx-markdown';
 import { HttpClient } from '@angular/common/http';
-import { SecurityContext } from '@angular/core';
 
 // enable default sanitization
 provideMarkdown();
@@ -26,23 +24,26 @@ provideMarkdown({
   styleUrl: './post.component.scss',
   providers: [provideMarkdown({ loader: HttpClient })],
 })
-export class PostComponent {
+export class PostComponent implements OnInit {
   post?: string;
-  href?: string;
 
-  constructor(
-    private route: ActivatedRoute,
-    private router: Router
-  ) //private service: HeroService
-  {}
+  constructor(private route: ActivatedRoute, private router: Router) {}
 
   ngOnInit(): void {
     this.getId();
   }
 
   getId(): void {
+    /*
     const id = this.route.snapshot.paramMap.get('id');
-    //this.href = window.location.href;
+    console.log(id);
     this.post = './assets/blog/post/' + id + '.md';
+    */
+
+    this.route.paramMap.subscribe((params: ParamMap) => {
+      const id = params.get('id');
+      console.log(id);
+      this.post = './assets/blog/post/' + id + '.md';
+    });
   }
 }

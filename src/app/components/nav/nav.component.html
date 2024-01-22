@@ -9,7 +9,7 @@
   <a
     *ngFor="let post of posts"
     class="page-link"
-    [routerLink]="[post.url]"
+    [routerLink]="['/blog/post', post.id]"
     routerLinkActive="active"
     [routerLinkActiveOptions]="{ exact: true }"
     >{{ post.id }}</a
