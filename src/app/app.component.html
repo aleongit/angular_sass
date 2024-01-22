@@ -1,9 +1,13 @@
+<div class="site-header">
+  <app-nav />
+</div>
 
-<app-nav/>
+<div class="home-main">
+  <h1>{{ title }} by Aleon</h1>
+  <!-- static markdown -->
+  <markdown ngPreserveWhitespaces> ## Markdown works ! </markdown>
 
-<h1>{{ title }} works!</h1>
-
-<!-- static markdown -->
-<markdown ngPreserveWhitespaces> # Markdown </markdown>
-
-<router-outlet />
+  <div class="page-content">
+    <router-outlet />
+  </div>
+</div>

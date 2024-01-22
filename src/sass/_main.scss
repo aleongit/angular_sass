@@ -2,11 +2,17 @@
 
 // Define defaults for each variable.
 
-//$base-font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol" !default;
-$base-font-family: monospace;
-$base-font-size: 16px !default;
+$base-font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+  Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji",
+  "Segoe UI Symbol" !default;
+$base-font-size: 1.1rem !default;
+
 $base-font-weight: 400 !default;
+$base-font-weight-bold: 600;
+$base-font-weight-bolder: 800;
+
 $small-font-size: $base-font-size * 0.875 !default;
+
 $base-line-height: 1.4 !default;
 
 $spacing-unit: 30px !default;
@@ -23,6 +29,9 @@ $table-text-align: left !default;
 
 // Width of the content area
 $content-width: 800px !default;
+
+//margins
+$margin-default: 1rem;
 
 $on-palm: 600px !default;
 $on-laptop: 800px !default;
@@ -45,7 +54,5 @@ $on-laptop: 800px !default;
 }
 
 // Import partials.
-@import "custom/base",
-"custom/layout",
-"custom/syntax-highlighting"
-;
+
+@import "custom/base", "custom/layout";

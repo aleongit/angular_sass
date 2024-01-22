@@ -1,12 +1,17 @@
-<div>
-  <a class="button" [routerLink]="['/']" routerLinkActive="activeButton"
+<div class="site-nav">
+  <a
+    class="page-link"
+    [routerLink]="['/blog']"
+    routerLinkActive="active"
+    [routerLinkActiveOptions]="{ exact: true }"
     >Home</a
   >
   <a
     *ngFor="let post of posts"
-    class="button"
+    class="page-link"
     [routerLink]="[post.url]"
-    routerLinkActive="activeButton"
+    routerLinkActive="active"
+    [routerLinkActiveOptions]="{ exact: true }"
     >{{ post.id }}</a
   >
 </div>
