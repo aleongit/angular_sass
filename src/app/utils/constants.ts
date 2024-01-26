@@ -33,4 +33,10 @@ export const POSTS: Post[] = [
     description:
       'A mixin lets you make groups of CSS declarations that you want to reuse throughout your site',
   },
+  {
+    id: 'extend',
+    title: 'Extend',
+    description:
+      'Using @extend lets you share a set of CSS properties from one selector to another',
+  },
 ];
