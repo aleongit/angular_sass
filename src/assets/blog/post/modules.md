@@ -4,7 +4,7 @@ You don’t have to write all your Sass in a single file. You can split it up ho
 
 
 SCSS
-```css
+```scss
 // _base.scss
 $font-stack: Helvetica, sans-serif;
 $primary-color: #333;

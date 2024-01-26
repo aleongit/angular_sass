@@ -4,7 +4,7 @@ Some things in CSS are a bit tedious to write, especially with CSS3 and the many
 
 
 SCSS
-```css
+```scss
 @mixin theme($theme: DarkGray) {
   background: $theme;
   box-shadow: 0 0 1px rgba($theme, .25);
