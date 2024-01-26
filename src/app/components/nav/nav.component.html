@@ -1,4 +1,5 @@
-<div class="site-nav">
+<!-- site-nav principal -->
+<div class="site-nav __home">
   <a
     class="page-link"
     [routerLink]="['/blog']"
@@ -6,12 +7,17 @@
     [routerLinkActiveOptions]="{ exact: true }"
     >Home</a
   >
-  <a
-    *ngFor="let post of posts"
-    class="page-link"
-    [routerLink]="['/blog/post', post.id]"
-    routerLinkActive="active"
-    [routerLinkActiveOptions]="{ exact: true }"
-    >{{ post.id }}</a
-  >
+</div>
+<!-- site-nav per categoria -->
+<div *ngFor="let cat of cats" class="site-nav">
+  <ng-container *ngFor="let post of posts">
+    <a
+      *ngIf="cat == post.category"
+      class="page-link"
+      [routerLink]="['/blog/post', post.id]"
+      routerLinkActive="active"
+      [routerLinkActiveOptions]="{ exact: true }"
+      >{{ post.id }}</a
+    >
+  </ng-container>
 </div>

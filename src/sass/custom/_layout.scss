@@ -42,11 +42,16 @@
 }
 
 .site-nav {
-  margin: $margin-default;
+  margin: 0.2rem 1rem;
   line-height: $base-line-height * $base-font-size * 2.25;
   display: flex;
   flex-wrap: wrap;
   gap: 2px;
+
+  //menú home
+  &.__home {
+    font-weight: $base-font-weight-bolder;
+  }
 
   .menu-icon {
     display: none;
@@ -109,7 +114,7 @@
 .post-link {
   display: block;
   padding: $spacing-unit;
-  background-color: aliceblue;
+  //background-color: aliceblue;
   border-radius: 30px;
   max-width: 275px;
   min-width: 275px;
@@ -123,6 +128,16 @@
     height: auto;
   }
 
+  //color per categoria
+  &.category-learn {
+    background-color: aliceblue;
+  }
+
+  &.category-doc {
+    background-color: rgb(227, 239, 250);
+  }
+
+  //spans
   & .__title {
     display: block;
     font-weight: $base-font-weight-bold;
@@ -140,6 +155,8 @@
 .post-meta {
   font-size: $small-font-size;
   color: $grey-color;
+  text-transform: capitalize;
+  margin-left: 0.5rem;
 }
 
 /**
