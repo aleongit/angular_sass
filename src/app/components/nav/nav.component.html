@@ -14,7 +14,7 @@
     <a
       *ngIf="cat == post.category"
       class="page-link"
-      [routerLink]="['/blog/post', post.id]"
+      [routerLink]="['/blog', post.category, post.id]"
       routerLinkActive="active"
       [routerLinkActiveOptions]="{ exact: true }"
       >{{ post.id }}</a

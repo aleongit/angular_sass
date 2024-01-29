@@ -42,8 +42,11 @@ export class PostComponent implements OnInit {
 
     this.route.paramMap.subscribe((params: ParamMap) => {
       const id = params.get('id');
+      const cat = params.get('cat');
       console.log(id);
-      this.post = './assets/blog/post/' + id + '.md';
+      console.log(cat);
+      //this.post = './assets/blog/' + cat + '/' + id + '.md';
+      this.post = `./assets/blog/${cat}/${id}.md`;
     });
   }
 }

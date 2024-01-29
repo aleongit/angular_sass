@@ -6,6 +6,6 @@ import { PageNotFoundComponent } from './components/page-not-found/page-not-foun
 export const routes: Routes = [
   { path: '', redirectTo: '/blog', pathMatch: 'full' },
   { path: 'blog', component: BlogComponent },
-  { path: 'blog/post/:id', component: PostComponent },
+  { path: 'blog/:cat/:id', component: PostComponent },
   { path: '**', component: PageNotFoundComponent }, // Wildcard route for a 404 page
 ];
