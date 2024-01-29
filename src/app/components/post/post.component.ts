@@ -1,10 +1,5 @@
 import { Component, OnInit, SecurityContext } from '@angular/core';
-import {
-  RouterOutlet,
-  Router,
-  ActivatedRoute,
-  ParamMap,
-} from '@angular/router';
+import { Router, ActivatedRoute, ParamMap } from '@angular/router';
 import { MarkdownModule, provideMarkdown } from 'ngx-markdown';
 import { HttpClient } from '@angular/common/http';
 
@@ -19,7 +14,7 @@ provideMarkdown({
 @Component({
   selector: 'app-post',
   standalone: true,
-  imports: [RouterOutlet, MarkdownModule],
+  imports: [MarkdownModule],
   templateUrl: './post.component.html',
   styleUrl: './post.component.scss',
   providers: [provideMarkdown({ loader: HttpClient })],
@@ -30,10 +25,10 @@ export class PostComponent implements OnInit {
   constructor(private route: ActivatedRoute, private router: Router) {}
 
   ngOnInit(): void {
-    this.getId();
+    this.getParams();
   }
 
-  getId(): void {
+  getParams(): void {
     /*
     const id = this.route.snapshot.paramMap.get('id');
     console.log(id);
