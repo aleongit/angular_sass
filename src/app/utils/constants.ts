@@ -74,6 +74,20 @@ export const POSTS: Post[] = [
       'Just like CSS, most Sass stylesheets are mainly made up of style rules that contain property declarations. But Sass stylesheets have many more features that can exist alongside these',
     category: 'doc',
   },
+  {
+    id: 'comments',
+    title: 'Comments',
+    description:
+      'Comments defined using /* */ that are (usually) compiled to CSS, and comments defined using // that are not',
+    category: 'doc',
+  },
+  {
+    id: 'special-functions',
+    title: 'Special Functions',
+    description:
+      'CSS defines many functions, and most of them work just fine with Sass’s normal function syntax',
+    category: 'doc',
+  },
 ];
 
 export const CATS: string[] = ['home', 'learn', 'doc'];
