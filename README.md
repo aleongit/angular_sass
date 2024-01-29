@@ -112,18 +112,22 @@ ng new angular_sass --style=scss
 
 - install ngx-markdown `npm install ngx-markdown marked --save`
 - install Prism.js library for Syntax highlight `npm install prismjs --save`
-- include Prism.js in `angular.json`
+- include Prism.js theme and components that you need in `angular.json`
 ```
 "styles": [
   "styles.css",
-+ "node_modules/prismjs/themes/prism-okaidia.css"
++ "node_modules/prismjs/themes/prism.css"
 ],
 "scripts": [
 + "node_modules/prismjs/prism.js",
-+ "node_modules/prismjs/components/prism-csharp.min.js",
++ "node_modules/prismjs/components/prism-scss.min.js",
 + "node_modules/prismjs/components/prism-css.min.js"
 ]
 ```
+
+- you can download theme and component file that you need
+- https://prismjs.com/download.html#themes=prism&languages=markup+css+clike+javascript+sass+scss
+
 
 - contents in *assets*
 ```
@@ -193,7 +197,7 @@ A route /blog/post/name-of-the-article
 
 
 
-### Blog with Analog
+### Blog with Angular
 - https://dev.to/analogjs/how-to-build-a-blog-with-analog-and-angular-4pk2
 - https://daviddalbusco.medium.com/add-a-blog-to-your-angular-website-using-markdown-files-31cdb0627bdd
 - https://www.makeuseof.com/angular-markdown-files-website/

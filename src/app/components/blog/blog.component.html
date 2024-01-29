@@ -1,10 +1,16 @@
 <div>
   <ul class="post-list">
-    <li *ngFor="let post of posts">
-      <a class="post-link" [routerLink]="['/blog/post', post.id]">
-        <span class="__title">{{ post.title }}</span>
-        <span class="__description">{{ post.description }}</span>
-      </a>
-    </li>
+    <ng-container *ngFor="let post of posts; index as i">
+      <li *ngIf="(!id && !cat) || (!id && cat == post.category)">
+        <span class="post-meta">{{ i + 1 }} / {{ post.category }}</span>
+        <a
+          class="post-link category-{{ post.category }}"
+          [routerLink]="['/blog', post.category, post.id]"
+        >
+          <span class="__title">{{ post.title }}</span>
+          <span class="__description">{{ post.description }}</span>
+        </a>
+      </li>
+    </ng-container>
   </ul>
 </div>
