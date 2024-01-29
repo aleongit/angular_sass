@@ -1,14 +1,15 @@
-<!-- site-nav principal -->
+<!-- site-nav principal, links per categories, si 'cat' és la home, link a home -->
 <div class="site-nav __home">
   <a
+    *ngFor="let cat of cats"
     class="page-link"
-    [routerLink]="['/blog']"
+    [routerLink]="cat == 'home' ? ['/blog'] : ['/blog', cat]"
     routerLinkActive="active"
     [routerLinkActiveOptions]="{ exact: true }"
-    >Home</a
+    >{{ cat }}</a
   >
 </div>
-<!-- site-nav per categoria -->
+<!-- site-nav menús de post per categoria -->
 <div *ngFor="let cat of cats" class="site-nav">
   <ng-container *ngFor="let post of posts">
     <a

@@ -65,9 +65,9 @@ export const POSTS: Post[] = [
     id: 'parsing-stylesheet',
     title: 'Parsing a Stylesheet',
     description:
-      'A Sass stylesheet is parsed from a sequence of Unicode code points. It’s parsed directly, without first being converted to a token stream',
+      'A Sass stylesheet is parsed from a sequence of Unicode code points.',
     category: 'doc',
   },
 ];
 
-export const CATS: string[] = ['learn', 'doc'];
+export const CATS: string[] = ['home', 'learn', 'doc'];
