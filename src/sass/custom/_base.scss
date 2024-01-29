@@ -96,6 +96,10 @@ li {
   }
 }
 
+ul {
+  margin-left: $margin-default * 2;
+}
+
 /*bold numbers in ordered list*/
 ol {
   > li::marker {

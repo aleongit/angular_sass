@@ -60,12 +60,18 @@ export const POSTS: Post[] = [
       'Sass supports two different syntaxes. Each one can load the other, so it’s up to you and your team which one to choose',
     category: 'doc',
   },
-
   {
     id: 'parsing-stylesheet',
     title: 'Parsing a Stylesheet',
     description:
-      'A Sass stylesheet is parsed from a sequence of Unicode code points.',
+      'A Sass stylesheet is parsed from a sequence of Unicode code points. It’s parsed directly, without first being converted to a token stream',
+    category: 'doc',
+  },
+  {
+    id: 'structure-stylesheet',
+    title: 'Structure of a Stylesheet',
+    description:
+      'Just like CSS, most Sass stylesheets are mainly made up of style rules that contain property declarations. But Sass stylesheets have many more features that can exist alongside these',
     category: 'doc',
   },
 ];

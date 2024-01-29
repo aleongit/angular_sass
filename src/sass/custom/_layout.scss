@@ -120,8 +120,6 @@
   min-width: 275px;
   height: 250px;
 
-  @include relative-font-size(1.5);
-
   @include media-query($on-palm) {
     max-width: none;
     min-width: none;
@@ -131,10 +129,12 @@
   //color per categoria
   &.category-learn {
     background-color: aliceblue;
+    @include relative-font-size(1.5);
   }
 
   &.category-doc {
     background-color: rgb(227, 239, 250);
+    @include relative-font-size(1.2);
   }
 
   //spans
