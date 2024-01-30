@@ -9,6 +9,7 @@ TODO:
 - Test sass in Angular 17
 - Test ngx-markdown
 - Angular 17: Getting started with standalone components
+- Add HTTP communication with JSON server
 
 
 
@@ -30,6 +31,7 @@ TODO:
 - angular 17
 - npm install ngx-markdown marked --save
 - npm install prismjs --save
+- npm install -g json-server
 
 
 
@@ -38,6 +40,7 @@ TODO:
 - git clone https://github.com/aleongit/angular_sass.git
 - cd angular_sass
 - npm install
+- json-server --watch db/db.json
 - ng serve
 - http://localhost:4200/
 
@@ -54,10 +57,10 @@ TODO:
 
 
 
-
 ## Run
 
 - cd angular_sass
+- json-server --watch db/db.json
 - ng serve
 - http://localhost:4200/
 
@@ -128,21 +131,47 @@ ng new angular_sass --style=scss
 - you can download theme and component file that you need
 - https://prismjs.com/download.html#themes=prism&languages=markup+css+clike+javascript+sass+scss
 
-
-- contents in *assets*
+- content 'md'
 ```
-assets > blog > blog.md: the list of blog entries
-assets > blog > post > *.md: the articles (= blog posts)
+- all posts in object or json file 
+- assets > blog > [category] > *.md: blog posts
 ```
 
 - routes
 ```
-A route /blog which will display a list of all articles
-A route /blog/post/name-of-the-article
+- A route /blog display a list of all posts
+- A route /blog/[category] display a list of category posts
+- A route /blog/[category]/name-of-the-post (=id)
 ```
 
-
-
+- add HTTP communication with JSON server
+```
+npm install -g json-server
+```
+- create file json with data */db/db.json*
+```json
+{
+  "posts": [
+    {
+      "id": "variables",
+      "title": "Variables",
+      "description": "Sass uses the $ symbol to make something a variable",
+      "category": "learn"
+    },
+    ...
+  ]
+}
+ 
+```
+- run json server
+```
+json-server --watch db/db.json
+```
+- open your browser
+```
+http://localhost:3000/       // server
+http://localhost:3000/posts  // endpoint 'posts'
+```
 
 
 ## Update Angular version
@@ -209,3 +238,11 @@ A route /blog/post/name-of-the-article
 
 
 
+### json-server
+- https://github.com/typicode/json-server
+- https://angular.io/tutorial/first-app/first-app-lesson-14
+
+
+### Promises vs Observables
+- https://stackoverflow.com/questions/37364973/what-is-the-difference-between-promises-and-observables
+- https://angular.io/guide/comparing-observables

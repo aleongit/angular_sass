@@ -3,6 +3,7 @@ import { RouterLink, ActivatedRoute, ParamMap } from '@angular/router';
 import { Post } from '../../utils/constants';
 import { NgFor, NgIf } from '@angular/common';
 import { PostService } from '../../services/post.service';
+import { objectToJSON } from '../../utils/helpers';
 
 @Component({
   selector: 'app-blog',
@@ -29,6 +30,7 @@ export class BlogComponent implements OnInit {
   //Observable data with service
   getPosts(): void {
     this.postService.getPosts().subscribe((data) => (this.posts = data));
+    //objectToJSON(this.posts);
   }
 
   getParams(): void {
