@@ -1,9 +1,4 @@
-export interface Post {
-  id: string;
-  title: string;
-  description: string;
-  category: string;
-}
+import { Post } from './interfaces';
 
 export const POSTS: Post[] = [
   {

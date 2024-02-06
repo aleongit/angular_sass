@@ -1,7 +1,7 @@
 <div>
   <ul class="post-list">
-    <ng-container *ngFor="let post of posts; index as i">
-      <li *ngIf="(!id && !cat) || (!id && cat == post.category)">
+    <ng-container *ngFor="let post of paginatedPosts; index as i">
+      <li>
         <span class="post-meta">{{ i + 1 }} / {{ post.category }}</span>
         <a
           class="post-link category-{{ post.category }}"
@@ -13,4 +13,11 @@
       </li>
     </ng-container>
   </ul>
+
+  <app-pagination
+    [currentPage]="currentPage"
+    [itemsPerPage]="itemsPerPage"
+    [totalItems]="totalItems"
+    (pageChanged)="onPageChange($event)"
+  ></app-pagination>
 </div>

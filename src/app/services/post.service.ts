@@ -1,8 +1,9 @@
 import { Injectable } from '@angular/core';
 import { Observable, of } from 'rxjs';
 import { catchError, map, tap } from 'rxjs/operators';
-import { POSTS, Post } from '../utils/constants';
-import { HttpClient, HttpHeaders } from '@angular/common/http';
+import { POSTS } from '../utils/constants';
+import { Post, Pagination } from '../utils/interfaces';
+import { HttpClient, HttpHeaders, HttpParams } from '@angular/common/http';
 
 @Injectable({
   providedIn: 'root',
@@ -31,6 +32,25 @@ export class PostService {
         .get<Post[]>(this.postsUrl)
         .pipe(tap(() => console.log('fetched posts!')))
     );
+  }
+
+  /*
+  Paginate [json-server]
+  - page
+  - per_page (default = 10)
+  GET /posts?_page=1&_per_page=25
+  */
+  getPaginatedPosts(
+    page: number,
+    itemsPerPage: number,
+    category: string
+  ): Observable<Pagination> {
+    const params = new HttpParams()
+      .set('_page', page.toString())
+      .set('_per_page', itemsPerPage.toString())
+      .set('category', category);
+
+    return this.http.get<Pagination>(this.postsUrl, { params });
   }
 
   /* examples with Observable ________________________________________________________*/

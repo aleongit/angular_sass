@@ -243,6 +243,39 @@ http://localhost:3000/posts  // endpoint 'posts'
 - https://angular.io/tutorial/first-app/first-app-lesson-14
 
 
-### Promises vs Observables
+### Promises vs Observables [RxJS]
 - https://stackoverflow.com/questions/37364973/what-is-the-difference-between-promises-and-observables
 - https://angular.io/guide/comparing-observables
+- https://rxjs.dev/deprecations/subscribe-arguments
+
+
+### of [RxJS]
+- https://rxjs.dev/api/index/function/of
+- https://www.learnrxjs.io/learn-rxjs/operators/creation/of
+
+
+### Pipe
+- https://www.freecodecamp.org/news/pipe-and-compose-in-javascript-5b04004ac937/
+
+
+### Pagination in Angular
+- https://medium.com/@hassaanali.dev/efficient-data-pagination-in-angular-implementing-smooth-and-performant-pagination-for-large-data-637fe994bbbf
+- https://javascript.plainenglish.io/handling-pagination-in-a-single-observable-stream-in-angular-b6d58e9c97d1
+- https://keepcoding.io/blog-frr/paginacion-en-angular-dos-componentes-un-servicio/
+
+
+### Input/ Output [Angular]
+- https://angular.io/guide/inputs-outputs
+- https://medium.com/williambastidasblog/angular-decoradores-input-y-output-70af5f43a04
+
+
+### Angular Property has no initializer and is not definitely assigned in the constructor
+- https://monsterlessons-academy.com/posts/angular-property-has-no-initializer-and-is-not-definitely-assigned-in-the-constructor
+
+
+### How To Use Query Parameters with Angular Router
+- https://www.digitalocean.com/community/tutorials/angular-query-parameters
+
+
+### Angular Router: Navigation Using RouterLink, Navigate, or NavigateByUrl
+- https://www.digitalocean.com/community/tutorials/angular-navigation-routerlink-navigate-navigatebyurl

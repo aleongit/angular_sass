@@ -1,4 +1,4 @@
-import { Post } from './constants';
+import { Post } from './interfaces';
 
 export const objectToJSON = (data: Post[]) => {
   // Converting JS object to JSON string
