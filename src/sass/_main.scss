@@ -24,6 +24,9 @@ $grey-color: #828282 !default;
 $grey-color-light: lighten($grey-color, 40%) !default;
 $grey-color-dark: darken($grey-color, 25%) !default;
 
+$yellow-color: gold;
+$yellow-color-light: rgba(255, 217, 0, 0.432);
+
 $table-text-align: left !default;
 
 // Width of the content area

@@ -1,12 +1,14 @@
 <div class="pagination">
   <button (click)="changePage(currentPage - 1)" [disabled]="currentPage === 1">
-    Previous
+    {{ "<<" }}
   </button>
-  <span>Page {{ currentPage }} of {{ totalPages }}</span>
+  <span
+    >Page <b>{{ currentPage }}</b> of <b>{{ totalPages }}</b></span
+  >
   <button
     (click)="changePage(currentPage + 1)"
     [disabled]="currentPage === totalPages"
   >
-    Next
+    {{ ">>" }}
   </button>
 </div>
