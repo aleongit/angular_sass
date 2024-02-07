@@ -5,7 +5,7 @@
     class="page-link"
     [routerLink]="cat == 'home' ? ['/blog'] : ['/blog', cat]"
     routerLinkActive="active"
-    [routerLinkActiveOptions]="{ exact: true }"
+    [routerLinkActiveOptions]="myMatchOptions"
     [queryParams]="{ page: defaultPage }"
     >{{ cat }}</a
   >

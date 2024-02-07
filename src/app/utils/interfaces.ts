@@ -14,3 +14,11 @@ export interface Pagination {
   pages: number;
   prev: number;
 }
+
+//from angular router
+interface IsActiveMatchOptions {
+  matrixParams: 'exact' | 'subset' | 'ignored';
+  queryParams: 'exact' | 'subset' | 'ignored';
+  paths: 'exact' | 'subset';
+  fragment: 'exact' | 'ignored';
+}
