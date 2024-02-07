@@ -1,15 +1,9 @@
 import { Component, OnInit } from '@angular/core';
-import {
-  Router,
-  RouterLink,
-  ActivatedRoute,
-  ParamMap,
-} from '@angular/router';
+import { Router, RouterLink, ActivatedRoute, ParamMap } from '@angular/router';
 import { Post } from '../../utils/interfaces';
 import { NgFor, NgIf } from '@angular/common';
 import { PostService } from '../../services/post.service';
 import { PaginationComponent } from '../pagination/pagination.component';
-
 
 @Component({
   selector: 'app-blog',
@@ -67,7 +61,10 @@ export class BlogComponent implements OnInit {
   getQueryParams(): void {
     //query params
     this.route.queryParamMap.subscribe((params: any) => {
-      this.currentPage = Number(params.get('page'));
+      const page = Number(params.get('page'));
+
+      //controlar si no hi ha paràmetre 'page'
+      page ? (this.currentPage = page) : (this.currentPage = 1);
       console.log(this.currentPage);
 
       //dins la subscripció, fetch posts

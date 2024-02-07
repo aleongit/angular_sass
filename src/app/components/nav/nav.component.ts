@@ -13,4 +13,5 @@ import { NgFor, NgIf } from '@angular/common';
 export class NavComponent {
   posts = POSTS;
   cats = CATS;
+  defaultPage: number = 1;
 }

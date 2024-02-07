@@ -6,7 +6,7 @@
     [routerLink]="cat == 'home' ? ['/blog'] : ['/blog', cat]"
     routerLinkActive="active"
     [routerLinkActiveOptions]="{ exact: true }"
-    [queryParams]="{ page: 1 }"
+    [queryParams]="{ page: defaultPage }"
     >{{ cat }}</a
   >
 </div>
