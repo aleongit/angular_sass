@@ -35,7 +35,7 @@ export class BlogComponent implements OnInit {
     //subscripció a canvis de rutes a url + paràmetres url (page) + get posts
     this.getRoutesParams();
     //subscripció per detectar només canvis de paràmetres url + gest posts
-    this.getQueryParams();
+    //this.getQueryParams();
   }
 
   //Observable data with service
@@ -79,6 +79,7 @@ export class BlogComponent implements OnInit {
       .getPaginatedPosts(this.currentPage, this.itemsPerPage, this.category)
       .subscribe({
         next: (data) => {
+          console.log('getPaginatedPosts()!');
           console.log(data);
           this.paginatedPosts = data.data;
           this.totalItems = data.items;
@@ -100,6 +101,6 @@ export class BlogComponent implements OnInit {
     });
 
     //get posts
-    this.getPaginatedPosts();
+    //this.getPaginatedPosts();
   }
 }
