@@ -1,11 +1,18 @@
 <div>
+  <app-pagination
+    [currentPage]="currentPage"
+    [itemsPerPage]="itemsPerPage"
+    [totalItems]="totalItems"
+    (pageChanged)="onPageChange($event)"
+  ></app-pagination>
+
   <ul class="post-list">
     <ng-container *ngFor="let post of paginatedPosts; index as i">
       <li>
-        <span class="post-meta">{{ i + 1 }} / {{ post.category }}</span>
+        <span class="post-meta">{{ post.id }} / {{ post.category }}</span>
         <a
           class="post-link category-{{ post.category }}"
-          [routerLink]="['/blog', post.category, post.id]"
+          [routerLink]="['/blog', post.category, post.name]"
         >
           <span class="__title">{{ post.title }}</span>
           <span class="__description">{{ post.description }}</span>
@@ -13,11 +20,4 @@
       </li>
     </ng-container>
   </ul>
-
-  <app-pagination
-    [currentPage]="currentPage"
-    [itemsPerPage]="itemsPerPage"
-    [totalItems]="totalItems"
-    (pageChanged)="onPageChange($event)"
-  ></app-pagination>
 </div>

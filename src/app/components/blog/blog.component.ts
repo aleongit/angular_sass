@@ -14,7 +14,7 @@ import { PaginationComponent } from '../pagination/pagination.component';
 })
 export class BlogComponent implements OnInit {
   posts: Post[] = [];
-  id?: string | null;
+  name?: string | null;
   category: string = '';
 
   //pagination
@@ -47,10 +47,10 @@ export class BlogComponent implements OnInit {
   getRoutesParams(): void {
     //paràmetres de les rutes
     this.route.paramMap.subscribe((params: ParamMap) => {
-      this.id = params.get('id');
+      this.name = params.get('name');
       this.category = params.get('cat') ?? '';
       //this.currentPage = Number(params.get('page'));
-      console.log(this.id);
+      console.log(this.name);
       console.log(this.category);
 
       //dins la subscripció de paramMap, agafar query params

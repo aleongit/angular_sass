@@ -7,6 +7,6 @@ export const routes: Routes = [
   { path: '', redirectTo: '/blog', pathMatch: 'full' },
   { path: 'blog', component: BlogComponent },
   { path: 'blog/:cat', component: BlogComponent },
-  { path: 'blog/:cat/:id', component: PostComponent },
+  { path: 'blog/:cat/:name', component: PostComponent },
   { path: '**', component: PageNotFoundComponent }, // Wildcard route for a 404 page
 ];

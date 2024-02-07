@@ -16,10 +16,10 @@
     <a
       *ngIf="cat == post.category"
       class="page-link"
-      [routerLink]="['/blog', post.category, post.id]"
+      [routerLink]="['/blog', post.category, post.name]"
       routerLinkActive="active"
       [routerLinkActiveOptions]="{ exact: true }"
-      >{{ post.id }}</a
+      >{{ post.name }}</a
     >
   </ng-container>
 </div>
