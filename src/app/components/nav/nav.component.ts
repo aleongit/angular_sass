@@ -1,8 +1,10 @@
-import { Component } from '@angular/core';
-import { POSTS, CATS } from '../../utils/constants';
+import { Component, OnInit } from '@angular/core';
+import { CATS, POSTS } from '../../utils/constants';
+import { Post } from '../../utils/interfaces';
 import { RouterLink, RouterLinkActive } from '@angular/router';
 import { NgFor, NgIf } from '@angular/common';
 import { IsActiveMatchOptions } from '@angular/router';
+import { PostService } from '../../services/post.service';
 
 @Component({
   selector: 'app-nav',
@@ -11,8 +13,8 @@ import { IsActiveMatchOptions } from '@angular/router';
   templateUrl: './nav.component.html',
   styleUrl: './nav.component.scss',
 })
-export class NavComponent {
-  posts = POSTS;
+export class NavComponent implements OnInit {
+  posts: Post[] = [];
   cats = CATS;
   defaultPage: number = 1;
 
@@ -23,4 +25,17 @@ export class NavComponent {
     paths: 'exact',
     fragment: 'exact',
   };
+
+  constructor(private postService: PostService) {}
+
+  ngOnInit(): void {
+    this.getPosts();
+  }
+
+  //Observable data with service
+  getPosts(): void {
+    this.postService.getPosts().subscribe((data) => (this.posts = data));
+    console.log('getPosts()!');
+    //objectToJSON(this.posts);
+  }
 }
