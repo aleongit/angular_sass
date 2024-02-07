@@ -92,10 +92,11 @@ export class BlogComponent implements OnInit {
     this.currentPage = page;
     console.log(this.router.url);
 
-    //set url
-    this.router.navigate(['blog', this.category], {
+    //set url relativa, no passem url, per evitar problemes de "/" a la url
+    this.router.navigate([], {
       queryParams: { page: page },
       queryParamsHandling: 'merge',
+      relativeTo: this.route,
     });
 
     //get posts
