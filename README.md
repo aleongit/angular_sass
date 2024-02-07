@@ -279,3 +279,12 @@ http://localhost:3000/posts  // endpoint 'posts'
 
 ### Angular Router: Navigation Using RouterLink, Navigate, or NavigateByUrl
 - https://www.digitalocean.com/community/tutorials/angular-navigation-routerlink-navigate-navigatebyurl
+
+
+### IsActiveMatchOptions - Angular
+- https://angular.io/api/router/IsActiveMatchOptions
+- https://lmfinney.wordpress.com/2021/10/08/how-to-mark-a-link-as-active-in-angular-even-if-the-query-params-are-different/
+
+
+### Router #navigate - Angular
+- https://angular.io/api/router/Router#navigate
