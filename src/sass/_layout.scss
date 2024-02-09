@@ -1,0 +1,238 @@
+/**
+   * Home
+   */
+.home-title {
+  color: $brand-color;
+  font-weight: 800;
+  margin: 0 0 2rem;
+}
+
+.home-subtitle {
+  padding: 0 0 2rem;
+}
+
+.home-main {
+  margin: $margin-default;
+}
+
+/**
+   * Site header
+   */
+.site-header {
+  border-top: 1px solid $grey-color-light;
+  border-bottom: 1px solid $grey-color-light;
+  min-height: $spacing-unit * 1.865;
+
+  // Positioning context for the mobile navigation icon
+  position: relative;
+}
+
+.site-title {
+  @include relative-font-size(1.625);
+  font-weight: 300;
+  line-height: $base-line-height * $base-font-size * 2.25;
+  letter-spacing: -1px;
+  margin-bottom: 0;
+  float: left;
+
+  &,
+  &:visited {
+    color: $grey-color-dark;
+  }
+}
+
+.site-nav {
+  margin: 0.2rem 1rem;
+  line-height: $base-line-height * $base-font-size * 2.25;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2px;
+
+  //menú home
+  &.__home {
+    font-weight: $base-font-weight-bolder;
+  }
+
+  .menu-icon {
+    display: none;
+  }
+
+  .page-link {
+    color: $text-color;
+    line-height: $base-line-height;
+    padding: 0.3rem;
+    border-radius: 10px;
+
+    // dark-mode styles
+    @include on-dark-mode {
+      color: $text-color--dark;
+    }
+
+    &:hover {
+      background-color: lighten($brand-color, 40%);
+      // dark-mode styles
+      @include on-dark-mode {
+        background-color: darken($brand-color, 40%);
+      }
+    }
+
+    &.active {
+      background-color: lighten($brand-color, 30%);
+      // dark-mode styles
+      @include on-dark-mode {
+        background-color: darken($brand-color, 30%);
+      }
+    }
+
+    // Gaps between nav items, but not on the last one
+    &:not(:last-child) {
+      margin-right: 20px;
+    }
+  }
+}
+
+/**
+   * Page content
+   */
+.page-content {
+  //padding: $spacing-unit 0;
+  flex: 1;
+}
+
+.page-heading {
+  @include relative-font-size(2);
+}
+
+.post-list-heading {
+  @include relative-font-size(1.75);
+}
+
+.post-list {
+  margin-left: 0;
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+
+  > li {
+    float: left;
+    margin-right: 1rem;
+    margin-bottom: $spacing-unit;
+  }
+
+  @include media-query($on-palm) {
+    display: block;
+  }
+}
+
+.post-link {
+  display: block;
+  padding: $spacing-unit;
+  //background-color: aliceblue;
+  border-radius: 30px;
+  max-width: 275px;
+  min-width: 275px;
+  height: 250px;
+
+  @include media-query($on-palm) {
+    max-width: none;
+    min-width: none;
+    height: auto;
+  }
+
+  //color per categoria
+  &.category-learn {
+    background-color: aliceblue;
+    @include relative-font-size(1.5);
+  }
+
+  &.category-doc {
+    background-color: rgb(227, 239, 250);
+    @include relative-font-size(1.2);
+  }
+
+  //spans
+  & .__title {
+    display: block;
+    font-weight: $base-font-weight-bold;
+  }
+
+  & .__description {
+    display: block;
+  }
+
+  &:hover {
+    text-decoration: none;
+  }
+}
+
+.post-meta {
+  font-size: $small-font-size;
+  color: $grey-color;
+  text-transform: capitalize;
+  margin-left: 0.5rem;
+}
+
+/**
+   * Posts
+   */
+.post-header {
+  margin-bottom: $spacing-unit;
+}
+
+.post-title {
+  @include relative-font-size(2.625);
+  letter-spacing: -1px;
+  line-height: 1;
+
+  @include media-query($on-laptop) {
+    @include relative-font-size(2.25);
+  }
+}
+
+.post-content {
+  margin-bottom: $spacing-unit;
+
+  h2 {
+    @include relative-font-size(2);
+
+    @include media-query($on-laptop) {
+      @include relative-font-size(1.75);
+    }
+  }
+
+  h3 {
+    @include relative-font-size(1.625);
+
+    @include media-query($on-laptop) {
+      @include relative-font-size(1.375);
+    }
+  }
+
+  h4 {
+    @include relative-font-size(1.25);
+
+    @include media-query($on-laptop) {
+      @include relative-font-size(1.125);
+    }
+  }
+}
+
+//paginació
+.pagination {
+  margin: $margin-default 0;
+
+  & button {
+    padding: 0.5rem;
+    margin: 0.5rem;
+    border: none;
+    border-radius: 50%;
+    background-color: $yellow-color-light;
+    cursor: pointer;
+    font-weight: $base-font-weight-bolder;
+
+    &:hover {
+      background-color: $yellow-color;
+      //font-weight: $base-font-weight-bolder;
+    }
+  }
+}

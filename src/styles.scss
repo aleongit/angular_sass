@@ -1,5 +1,11 @@
 /* You can add global styles to this file, and also import other style files */
-@import "main";
 @import "variables";
+@import "main";
 @import "mixins";
 @import "test";
+@import "base";
+@import "layout";
+
+//@import "./prismjs/prism.css";
+@import "./prismjs/prism-tomorrow.css"; /* fosc */
+

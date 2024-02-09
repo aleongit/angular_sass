@@ -1,29 +1,32 @@
 @charset "utf-8";
+@use "sass:meta";
 
 // Define defaults for each variable.
 $base-font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
   Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji",
   "Segoe UI Symbol" !default;
 $base-font-size: 1.1rem !default;
-
 $base-font-weight: 400 !default;
 $base-font-weight-bold: 600;
 $base-font-weight-bolder: 800;
-
 $small-font-size: $base-font-size * 0.875 !default;
-
 $base-line-height: 1.4 !default;
-
 $spacing-unit: 30px !default;
 
+//-- colors
+//--dark = theme--dark
 $text-color: #111 !default;
-$background-color: #fdfdfd !default;
-$brand-color: #2a7ae2 !default;
+$text-color--light: #111;
+$text-color--dark: #fdfdfd;
 
+$background-color: #fdfdfd !default;
+$background-color--light: #fdfdfd;
+$background-color--dark: #2e2c2c;
+
+$brand-color: #2a7ae2 !default;
 $grey-color: #828282 !default;
 $grey-color-light: lighten($grey-color, 40%) !default;
 $grey-color-dark: darken($grey-color, 25%) !default;
-
 $yellow-color: gold;
 $yellow-color-light: rgba(255, 217, 0, 0.432);
 
@@ -55,6 +58,16 @@ $on-laptop: 800px !default;
   font-size: $base-font-size * $ratio;
 }
 
+//dark mode
+@mixin on-dark-mode {
+  @media (prefers-color-scheme: dark) {
+    html[data-theme="auto"] & {
+      @content;
+    }
+  }
+  html[data-theme="dark"] & {
+    @content;
+  }
+}
 // Import partials.
-
-@import "custom/base", "custom/layout";
+//@import "custom/base", "custom/layout";

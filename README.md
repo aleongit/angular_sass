@@ -288,3 +288,8 @@ http://localhost:3000/posts  // endpoint 'posts'
 
 ### Router #navigate - Angular
 - https://angular.io/api/router/Router#navigate
+
+
+### How to Create a Dark Mode in Sass
+- https://dev.to/wgnrd/adding-a-dark-mode-to-your-website-using-scss-4pdc
+- https://berbaquero.com/posts/2023/03/sass-dark-mode/
