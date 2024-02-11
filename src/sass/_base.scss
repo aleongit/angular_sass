@@ -206,10 +206,13 @@ pre {
 
 //overwrite prism! __________________________________________________
 pre[class*="language-"] {
-  background: black !important;
-  border: none !important;
-  box-shadow: none !important;
-  text-shadow: none !important;
+  // dark-mode styles
+  @include on-dark-mode {
+    background: black !important;
+    border: none !important;
+    box-shadow: none !important;
+    text-shadow: none !important;
+  }
 }
 
 /**
