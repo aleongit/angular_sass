@@ -1,3 +1,5 @@
+@use "sass:meta";
+
 /* You can add global styles to this file, and also import other style files */
 @import "variables";
 @import "main";
@@ -6,6 +8,14 @@
 @import "base";
 @import "layout";
 
-//@import "./prismjs/prism.css";
-@import "./prismjs/prism-tomorrow.css"; /* fosc */
 
+//per carregar theme css prismjs, segons data-theme
+html[data-theme="auto"] {
+  @include meta.load-css("./prismjs/prism.css");
+}
+html[data-theme="dark"] {
+  @include meta.load-css("./prismjs/prism-tomorrow.css");
+}
+
+//@import "./prismjs/prism.css";
+//@import "./prismjs/prism-tomorrow.css"; /* fosc */
