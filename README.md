@@ -131,6 +131,29 @@ ng new angular_sass --style=scss
 - you can download theme and component file that you need
 - https://prismjs.com/download.html#themes=prism&languages=markup+css+clike+javascript+sass+scss
 
+
+- you can move the 'prismjs css theme' in your styles folder and import it
+- **angular.json**
+```
+"styles": ["src/styles.scss"],
+```
+- **styles.scss**
+```
+@import "./prismjs/prism.css";
+...
+```
+- for dark mode, you can import an other theme with `@use "sass:meta";` and `@include meta.load-css()`
+```
+html[data-theme="auto"] {
+  @include meta.load-css("./prismjs/prism.css");
+}
+html[data-theme="dark"] {
+  @include meta.load-css("./prismjs/prism-tomorrow.css");
+}
+```
+
+
+
 - content 'md'
 ```
 - all posts in object or json file 
@@ -141,7 +164,7 @@ ng new angular_sass --style=scss
 ```
 - A route /blog display a list of all posts
 - A route /blog/[category] display a list of category posts
-- A route /blog/[category]/name-of-the-post (=id)
+- A route /blog/[category]/name-of-the-post (=name)
 ```
 
 - add HTTP communication with JSON server
@@ -153,10 +176,11 @@ npm install -g json-server
 {
   "posts": [
     {
-      "id": "variables",
-      "title": "Variables",
-      "description": "Sass uses the $ symbol to make something a variable",
-      "category": "learn"
+    "id": "1",
+    "name": "variables",
+    "title": "Variables",
+    "description": "Sass uses the $ symbol to make something a variable",
+    "category": "learn"
     },
     ...
   ]
@@ -172,6 +196,7 @@ json-server --watch db/db.json
 http://localhost:3000/       // server
 http://localhost:3000/posts  // endpoint 'posts'
 ```
+
 
 
 ## Update Angular version
@@ -293,3 +318,8 @@ http://localhost:3000/posts  // endpoint 'posts'
 ### How to Create a Dark Mode in Sass
 - https://dev.to/wgnrd/adding-a-dark-mode-to-your-website-using-scss-4pdc
 - https://berbaquero.com/posts/2023/03/sass-dark-mode/
+
+
+### Scope your CSS imports with meta.load-css in Sass
+- https://tinytip.co/tips/scss-load-css/
+- https://stackoverflow.com/questions/59257368/how-to-dynamically-change-the-theme-using-highlight-js
