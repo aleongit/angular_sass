@@ -47,6 +47,7 @@
   display: flex;
   flex-wrap: wrap;
   gap: 2px;
+  align-items: center;
 
   //menú home
   &.__home {
@@ -55,6 +56,12 @@
 
   .menu-icon {
     display: none;
+  }
+
+  .mode-switcher {
+    //background-color: gold;
+    margin-left: auto;
+    cursor: pointer;
   }
 
   .page-link {

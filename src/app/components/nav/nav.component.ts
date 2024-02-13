@@ -1,15 +1,15 @@
 import { Component, OnInit } from '@angular/core';
-import { CATS, POSTS } from '../../utils/constants';
+import { CATS } from '../../utils/constants';
 import { Post } from '../../utils/interfaces';
-import { RouterLink, RouterLinkActive } from '@angular/router';
+import { RouterLink, RouterLinkActive, IsActiveMatchOptions } from '@angular/router';
 import { NgFor, NgIf } from '@angular/common';
-import { IsActiveMatchOptions } from '@angular/router';
 import { PostService } from '../../services/post.service';
+import { ModeSwitcherComponent } from '../mode-switcher/mode-switcher.component';
 
 @Component({
   selector: 'app-nav',
   standalone: true,
-  imports: [RouterLink, RouterLinkActive, NgFor, NgIf],
+  imports: [RouterLink, RouterLinkActive, NgFor, NgIf, ModeSwitcherComponent],
   templateUrl: './nav.component.html',
   styleUrl: './nav.component.scss',
 })

@@ -323,3 +323,12 @@ http://localhost:3000/posts  // endpoint 'posts'
 ### Scope your CSS imports with meta.load-css in Sass
 - https://tinytip.co/tips/scss-load-css/
 - https://stackoverflow.com/questions/59257368/how-to-dynamically-change-the-theme-using-highlight-js
+
+
+### Use vs Import in Sass: Which One Should You Choose?
+- https://kentwynn.com/frontend-languages/use-vs-import-in-sass-which-one-should-you-choose/kentwynn/27/03/2023/
+
+
+### Material Icons Guide
+- https://developers.google.com/fonts/docs/material_icons
+- https://fonts.google.com/icons
