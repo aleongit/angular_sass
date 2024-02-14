@@ -75,6 +75,10 @@
       color: $text-color--dark;
     }
 
+    &.light-theme {
+      color: orange;
+    }
+
     &:hover {
       background-color: lighten($brand-color, 40%);
       // dark-mode styles

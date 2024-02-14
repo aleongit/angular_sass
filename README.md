@@ -324,6 +324,10 @@ http://localhost:3000/posts  // endpoint 'posts'
 - https://codebeyondlimits.com/articles/angular-theming-how-to-create-a-dynamic-theme-switcher-for-light-and-dark-mode
 
 
+### Class and style binding - Angular
+- https://angular.io/guide/class-binding#single-and-multiple-style-binding-example
+
+
 ### Scope your CSS imports with meta.load-css in Sass
 - https://tinytip.co/tips/scss-load-css/
 - https://stackoverflow.com/questions/59257368/how-to-dynamically-change-the-theme-using-highlight-js
