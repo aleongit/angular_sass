@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { Router, RouterLink, ActivatedRoute, ParamMap } from '@angular/router';
 import { ThemeService } from '../../services/theme.service';
 
@@ -9,7 +9,7 @@ import { ThemeService } from '../../services/theme.service';
   templateUrl: './theme-switcher.component.html',
   styleUrl: './theme-switcher.component.scss',
 })
-export class ThemeSwitcherComponent {
+export class ThemeSwitcherComponent implements OnInit {
   public isLightTheme = true;
   iconLightTheme = 'light_mode';
   iconDarkTheme = 'dark_mode';
@@ -20,9 +20,22 @@ export class ThemeSwitcherComponent {
     private themeService: ThemeService
   ) {}
 
+  ngOnInit(): void {
+    this.getQueryParams();
+  }
+
+  getQueryParams(): void {
+    //query params
+    this.route.queryParamMap.subscribe((params: any) => {
+      const theme = params.get('theme');
+      theme === 'light' ? this.isLightTheme : !this.isLightTheme;
+    });
+  }
+
   onThemeSwitchChange() {
     console.log('onThemeSwitchChange()!');
     this.isLightTheme = !this.isLightTheme;
+    console.log(this.isLightTheme);
 
     this.isLightTheme
       ? this.themeService.setLightTheme()

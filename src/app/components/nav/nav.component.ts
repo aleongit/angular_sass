@@ -47,7 +47,6 @@ export class NavComponent implements OnInit {
     this.route.queryParamMap.subscribe((params: any) => {
       const theme = params.get('theme');
       theme ? (this.theme = theme) : (this.theme = 'light');
-      //console.log(this.mode);
     });
   }
 
