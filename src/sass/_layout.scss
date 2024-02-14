@@ -243,3 +243,17 @@
     }
   }
 }
+
+//page not found
+.page-not-found {
+  color: $text-color;
+  background-color: $yellow-color-light;
+  display: block;
+  padding: 30px;
+  border-radius: 30px;
+  height: 250px;
+
+  & .title {
+    font-weight: $base-font-weight-bolder;
+  }
+}
