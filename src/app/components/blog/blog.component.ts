@@ -30,8 +30,8 @@ export class BlogComponent implements OnInit {
   ) {}
 
   ngOnInit(): void {
-    //this.getPosts();
     console.log('ngOnInit()!');
+    //this.getPosts();
     //subscripció a canvis de rutes a url + paràmetres url (page) + get posts
     this.getRoutesParams();
     //subscripció per detectar només canvis de paràmetres url + gest posts
