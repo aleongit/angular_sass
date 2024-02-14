@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { Router, RouterLink, ActivatedRoute, ParamMap } from '@angular/router';
+import { ActivatedRoute } from '@angular/router';
 
 @Injectable({
   providedIn: 'root',
@@ -15,12 +15,11 @@ export class ThemeService {
       document.documentElement.getAttribute('data-theme') === this.THEME_LIGHT
         ? this.THEME_LIGHT
         : this.THEME_DARK;
-    console.log('in constructor of ThemeService!');
     console.log(document.documentElement.getAttribute('data-theme'));
     console.log(this.theme);
     */
-    console.log('in constructor of ThemeService!');
 
+    console.log('in constructor of ThemeService!');
     //get query params
     //get 'theme' i sinó estableix 'light'
     this.route.queryParamMap.subscribe((params: any) => {
