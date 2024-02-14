@@ -32,17 +32,10 @@ export class BlogComponent implements OnInit {
 
   ngOnInit(): void {
     console.log('ngOnInit()!');
-    //this.getPosts();
     //subscripció a canvis de rutes a url + paràmetres url (page) + get posts
     this.getRoutesParams();
     //subscripció per detectar només canvis de paràmetres url + gest posts
     //this.getQueryParams();
-  }
-
-  //Observable data with service
-  getPosts(): void {
-    this.postService.getPosts().subscribe((data) => (this.posts = data));
-    //objectToJSON(this.posts);
   }
 
   getRoutesParams(): void {
