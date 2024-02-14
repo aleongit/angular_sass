@@ -61,7 +61,7 @@ $on-laptop: 800px !default;
 //dark mode
 @mixin on-dark-mode {
   @media (prefers-color-scheme: dark) {
-    html[data-theme="auto"] & {
+    html[data-theme="light"] & {
       @content;
     }
   }

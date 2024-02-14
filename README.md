@@ -320,6 +320,10 @@ http://localhost:3000/posts  // endpoint 'posts'
 - https://berbaquero.com/posts/2023/03/sass-dark-mode/
 
 
+### Angular Theming: How to Create a Dynamic Theme Switcher for Light & Dark Mode
+- https://codebeyondlimits.com/articles/angular-theming-how-to-create-a-dynamic-theme-switcher-for-light-and-dark-mode
+
+
 ### Scope your CSS imports with meta.load-css in Sass
 - https://tinytip.co/tips/scss-load-css/
 - https://stackoverflow.com/questions/59257368/how-to-dynamically-change-the-theme-using-highlight-js

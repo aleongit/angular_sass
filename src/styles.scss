@@ -8,9 +8,8 @@
 @import "base";
 @import "layout";
 
-
 //per carregar theme css prismjs, segons data-theme
-html[data-theme="auto"] {
+html[data-theme="light"] {
   @include meta.load-css("./prismjs/prism.css");
 }
 html[data-theme="dark"] {
