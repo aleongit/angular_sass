@@ -16,6 +16,7 @@ export class BlogComponent implements OnInit {
   posts: Post[] = [];
   name?: string | null;
   category: string = '';
+  theme?: string;
 
   //pagination
   paginatedPosts: Post[] = [];
@@ -61,10 +62,13 @@ export class BlogComponent implements OnInit {
   getQueryParams(): void {
     //query params
     this.route.queryParamMap.subscribe((params: any) => {
+      //get
       const page = Number(params.get('page'));
+      const theme = params.get('theme');
 
-      //controlar si no hi ha paràmetre 'page'
+      //set
       page ? (this.currentPage = page) : (this.currentPage = 1);
+      theme ? (this.theme = theme) : (this.theme = 'light');
       console.log(this.currentPage);
 
       //dins la subscripció, fetch posts

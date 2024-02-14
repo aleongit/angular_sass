@@ -13,6 +13,7 @@
         <a
           class="post-link category-{{ post.category }}"
           [routerLink]="['/blog', post.category, post.name]"
+          [queryParams]="{ theme: theme }"
         >
           <span class="__title">{{ post.title }}</span>
           <span class="__description">{{ post.description }}</span>
