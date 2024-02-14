@@ -203,6 +203,10 @@
 .post-content {
   margin-bottom: $spacing-unit;
 
+  p {
+    margin: 1.5rem 0;
+  }
+
   h2 {
     @include relative-font-size(2);
 

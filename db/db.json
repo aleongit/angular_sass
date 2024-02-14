@@ -90,6 +90,20 @@
       "title": "Style Rules",
       "description": "Style rules are the foundation of Sass, just like they are for CSS. And they work the same way: you choose which elements to style with a selector, and declare properties that affect how those elements look",
       "category": "doc"
+    },
+    {
+      "id": 14,
+      "name": "property-declarations",
+      "title": "Property Declarations",
+      "description": "Property declarations define how elements that match a selector are styled. But Sass adds extra features to make them easier to write and to automate.",
+      "category": "doc"
+    },
+    {
+      "id": 15,
+      "name": "parent-selector",
+      "title": "Parent Selector",
+      "description": "The parent selector, &, is a special selector invented by Sass that’s used in nested selectors to refer to the outer selector.",
+      "category": "doc"
     }
   ]
 }
