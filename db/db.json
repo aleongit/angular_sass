@@ -83,6 +83,13 @@
       "title": "Special Functions",
       "description": "CSS defines many functions, and most of them work just fine with Sass’s normal function syntax",
       "category": "doc"
+    },
+    {
+      "id": 13,
+      "name": "style-rules",
+      "title": "Style Rules",
+      "description": "Style rules are the foundation of Sass, just like they are for CSS. And they work the same way: you choose which elements to style with a selector, and declare properties that affect how those elements look",
+      "category": "doc"
     }
   ]
 }

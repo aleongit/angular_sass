@@ -340,3 +340,7 @@ http://localhost:3000/posts  // endpoint 'posts'
 ### Material Icons Guide
 - https://developers.google.com/fonts/docs/material_icons
 - https://fonts.google.com/icons
+
+
+### The Markdown Guide
+- https://www.markdownguide.org/
