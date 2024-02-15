@@ -5,11 +5,15 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 
 ## Introduction
 
-TODO:
-- Test sass in Angular 17
-- Test ngx-markdown
+Checkpoints:
 - Angular 17: Getting started with standalone components
-- Add HTTP communication with JSON server
+- SASS in Angular 17
+- ngx-markdown
+- HTTP communication with JSON server
+- Pagination
+- Light/Dark mode [prefers-color-scheme]
+- prismjs [meta.load-css to load template depending on light/dark mode]
+- Query params
 
 
 
@@ -40,8 +44,8 @@ TODO:
 - git clone https://github.com/aleongit/angular_sass.git
 - cd angular_sass
 - npm install
-- json-server --watch db/db.json
-- ng serve
+- `json-server --watch db/db.json`
+- `ng serve`
 - http://localhost:4200/
 
 
