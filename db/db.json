@@ -104,6 +104,27 @@
       "title": "Parent Selector",
       "description": "The parent selector, &, is a special selector invented by Sass that’s used in nested selectors to refer to the outer selector.",
       "category": "doc"
+    },
+    {
+      "id": 16,
+      "name": "placeholder-selectors",
+      "title": "Placeholder Selectors",
+      "description": "Sass has a special kind of selector known as a “placeholder”. It looks and acts a lot like a class selector, but it starts with a % and it’s not included in the CSS output.",
+      "category": "doc"
+    },
+    {
+      "id": 17,
+      "name": "variables",
+      "title": "Variable",
+      "description": "Sass variables are simple: you assign a value to a name that begins with $, and then you can refer to that name instead of the value itself.",
+      "category": "doc"
+    },
+    {
+      "id": 18,
+      "name": "interpolation",
+      "title": "Interpolation",
+      "description": "Interpolation can be used almost anywhere in a Sass stylesheet to embed the result of a SassScript expression into a chunk of CSS. Just wrap an expression in #{}.",
+      "category": "doc"
     }
   ]
 }
