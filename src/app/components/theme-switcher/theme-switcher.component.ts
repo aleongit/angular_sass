@@ -27,7 +27,7 @@ export class ThemeSwitcherComponent implements OnInit {
   getQueryParams(): void {
     //query params
     this.route.queryParamMap.subscribe((params: any) => {
-      const theme = params.get('theme');
+      const theme = params.get('theme') ?? 'light';
       theme === 'light'
         ? (this.isLightTheme = true)
         : (this.isLightTheme = false);
