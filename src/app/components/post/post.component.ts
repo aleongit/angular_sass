@@ -28,14 +28,15 @@ export class PostComponent implements OnInit {
     private markdownService: MarkdownService
   ) {}
 
-  //Re-render Markdown
-  //https://jfcere.github.io/ngx-markdown/get-started#re-render-markdown
-  update() {
-    this.markdownService.reload();
+  ngOnInit(): void {
+    this.updateMarkdown();
+    this.getParams();
   }
 
-  ngOnInit(): void {
-    this.getParams();
+  //Re-render Markdown
+  //https://jfcere.github.io/ngx-markdown/get-started#re-render-markdown
+  updateMarkdown() {
+    this.markdownService.reload();
   }
 
   getParams(): void {
