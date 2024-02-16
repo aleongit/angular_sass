@@ -82,7 +82,9 @@ export class BlogComponent implements OnInit {
           this.totalItems = data.items;
         },
         error: (e) => console.error(e),
-        complete: () => console.info('complete'),
+        complete: () => {
+          console.info('complete');
+        },
       });
   }
 

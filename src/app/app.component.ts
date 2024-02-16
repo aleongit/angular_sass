@@ -13,5 +13,7 @@ import { NavComponent } from './components/nav/nav.component';
 })
 export class AppComponent {
   title = 'angular_sass';
-  author = 'Aleon'
+  author = 'Aleon';
+
+  constructor() {}
 }
