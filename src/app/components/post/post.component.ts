@@ -20,18 +20,13 @@ export class PostComponent implements OnInit {
   }
 
   getParams(): void {
-    /*
-    const id = this.route.snapshot.paramMap.get('id');
-    console.log(id);
-    this.post = './assets/blog/post/' + id + '.md';
-    */
-
     this.route.paramMap.subscribe((params: ParamMap) => {
       const name = params.get('name');
       const cat = params.get('cat');
       console.log(name);
       console.log(cat);
       this.post = `./assets/blog/${cat}/${name}.md`;
+      console.log(this.post);
     });
   }
 }

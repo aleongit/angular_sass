@@ -102,7 +102,8 @@ li {
   }
 }
 
-ul {
+ul,
+ol {
   margin-left: $margin-default * 2;
 }
 
@@ -110,6 +111,10 @@ ul {
 ol {
   > li::marker {
     font-weight: bolder;
+  }
+
+  li {
+    padding-left: $margin-default;
   }
 }
 
@@ -185,6 +190,9 @@ code {
   border: 1px solid $grey-color-light;
   border-radius: 3px;
   background-color: #eef;
+  @include on-dark-mode {
+    color: $text-color--light;
+  }
 }
 
 code {

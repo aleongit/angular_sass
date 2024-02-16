@@ -95,35 +95,63 @@
       "id": 14,
       "name": "property-declarations",
       "title": "Property Declarations",
-      "description": "Property declarations define how elements that match a selector are styled. But Sass adds extra features to make them easier to write and to automate.",
+      "description": "Property declarations define how elements that match a selector are styled. But Sass adds extra features to make them easier to write and to automate",
       "category": "doc"
     },
     {
       "id": 15,
       "name": "parent-selector",
       "title": "Parent Selector",
-      "description": "The parent selector, &, is a special selector invented by Sass that’s used in nested selectors to refer to the outer selector.",
+      "description": "The parent selector, &, is a special selector invented by Sass that’s used in nested selectors to refer to the outer selector",
       "category": "doc"
     },
     {
       "id": 16,
       "name": "placeholder-selectors",
       "title": "Placeholder Selectors",
-      "description": "Sass has a special kind of selector known as a “placeholder”. It looks and acts a lot like a class selector, but it starts with a % and it’s not included in the CSS output.",
+      "description": "Sass has a special kind of selector known as a “placeholder”. It looks and acts a lot like a class selector, but it starts with a % and it’s not included in the CSS output",
       "category": "doc"
     },
     {
       "id": 17,
       "name": "variables",
       "title": "Variable",
-      "description": "Sass variables are simple: you assign a value to a name that begins with $, and then you can refer to that name instead of the value itself.",
+      "description": "Sass variables are simple: you assign a value to a name that begins with $, and then you can refer to that name instead of the value itself",
       "category": "doc"
     },
     {
       "id": 18,
       "name": "interpolation",
       "title": "Interpolation",
-      "description": "Interpolation can be used almost anywhere in a Sass stylesheet to embed the result of a SassScript expression into a chunk of CSS. Just wrap an expression in #{}.",
+      "description": "Interpolation can be used almost anywhere in a Sass stylesheet to embed the result of a SassScript expression into a chunk of CSS. Just wrap an expression in #{}",
+      "category": "doc"
+    },
+    {
+      "id": 19,
+      "name": "at-rules",
+      "title": "At-Rules",
+      "description": "Much of Sass’s extra functionality comes in the form of new at-rules it adds on top of CSS",
+      "category": "doc"
+    },
+    {
+      "id": 20,
+      "name": "values",
+      "title": "Values",
+      "description": "Sass supports a number of value types, most of which come straight from CSS. Every expression produces a value, variables hold values. Most value types come straight from CSS",
+      "category": "doc"
+    },
+    {
+      "id": 21,
+      "name": "operators",
+      "title": "Operators",
+      "description": "Sass supports a handful of useful operators for working with different values. These include the standard mathematical operators like + and *, as well as operators for various other types",
+      "category": "doc"
+    },
+    {
+      "id": 22,
+      "name": "built-in-modules",
+      "title": "Built-In Modules",
+      "description": "Sass provides many built-in modules which contain useful functions (and the occasional mixin)",
       "category": "doc"
     }
   ]
