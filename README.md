@@ -267,6 +267,11 @@ http://localhost:3000/posts  // endpoint 'posts'
 
 
 
+### Re-render Markdown
+- https://jfcere.github.io/ngx-markdown/get-started#re-render-markdown
+
+
+
 ### json-server
 - https://github.com/typicode/json-server
 - https://angular.io/tutorial/first-app/first-app-lesson-14

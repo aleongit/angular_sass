@@ -1,6 +1,6 @@
 import { Component, OnInit, SecurityContext } from '@angular/core';
 import { Router, ActivatedRoute, ParamMap } from '@angular/router';
-import { MarkdownModule, provideMarkdown } from 'ngx-markdown';
+import { MarkdownModule, provideMarkdown, MarkdownService } from 'ngx-markdown';
 import { HttpClient } from '@angular/common/http';
 
 // enable default sanitization
@@ -22,7 +22,17 @@ provideMarkdown({
 export class PostComponent implements OnInit {
   post?: string;
 
-  constructor(private route: ActivatedRoute, private router: Router) {}
+  constructor(
+    private route: ActivatedRoute,
+    private router: Router,
+    private markdownService: MarkdownService
+  ) {}
+
+  //Re-render Markdown
+  //https://jfcere.github.io/ngx-markdown/get-started#re-render-markdown
+  update() {
+    this.markdownService.reload();
+  }
 
   ngOnInit(): void {
     this.getParams();
