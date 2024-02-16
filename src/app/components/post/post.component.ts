@@ -1,15 +1,6 @@
-import { Component, OnInit, SecurityContext } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, ParamMap } from '@angular/router';
-import { MarkdownModule, provideMarkdown } from 'ngx-markdown';
-import { HttpClient } from '@angular/common/http';
-
-// enable default sanitization
-provideMarkdown();
-
-// turn off sanitization
-provideMarkdown({
-  sanitize: SecurityContext.NONE,
-});
+import { MarkdownModule } from 'ngx-markdown';
 
 @Component({
   selector: 'app-post',
@@ -17,7 +8,7 @@ provideMarkdown({
   imports: [MarkdownModule],
   templateUrl: './post.component.html',
   styleUrl: './post.component.scss',
-  providers: [provideMarkdown({ loader: HttpClient })],
+  providers: [],
 })
 export class PostComponent implements OnInit {
   post?: string;
@@ -40,7 +31,6 @@ export class PostComponent implements OnInit {
       const cat = params.get('cat');
       console.log(name);
       console.log(cat);
-      //this.post = './assets/blog/' + cat + '/' + id + '.md';
       this.post = `./assets/blog/${cat}/${name}.md`;
     });
   }
