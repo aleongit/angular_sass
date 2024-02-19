@@ -160,6 +160,20 @@
       "title": "@use",
       "description": "The @use rule loads mixins, functions, and variables from other Sass stylesheets, and combines CSS from multiple stylesheets together. Stylesheets loaded by @use are called 'modules'",
       "category": "doc"
+    },
+    {
+      "id": 24,
+      "name": "forward",
+      "title": "@forward",
+      "description": "The @forward rule loads a Sass stylesheet and makes its mixins, functions, and variables) available when your stylesheet is loaded with the @use rule",
+      "category": "doc"
+    },
+    {
+      "id": 25,
+      "name": "mixin-include",
+      "title": "@mixin and @include",
+      "description": "Mixins allow you to define styles that can be re-used throughout your stylesheet. They make it easy to avoid using non-semantic classes like .float-left, and to distribute collections of styles in libraries.",
+      "category": "doc"
     }
   ]
 }
