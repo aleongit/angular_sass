@@ -153,6 +153,13 @@
       "title": "Built-In Modules",
       "description": "Sass provides many built-in modules which contain useful functions (and the occasional mixin)",
       "category": "doc"
+    },
+    {
+      "id": 23,
+      "name": "use",
+      "title": "@use",
+      "description": "The @use rule loads mixins, functions, and variables from other Sass stylesheets, and combines CSS from multiple stylesheets together. Stylesheets loaded by @use are called 'modules'",
+      "category": "doc"
     }
   ]
 }
