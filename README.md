@@ -267,8 +267,8 @@ http://localhost:3000/posts  // endpoint 'posts'
 
 
 
-### Re-render Markdown
-- https://jfcere.github.io/ngx-markdown/get-started#re-render-markdown
+### marked.js [options]
+- https://marked.js.org/using_advanced#options
 
 
 
