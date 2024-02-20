@@ -9,7 +9,7 @@ Checkpoints:
 - Angular 17: Getting started with standalone components
 - SASS in Angular 17
 - ngx-markdown
-- HTTP communication with JSON server
+- HTTP communication with JSON server [json and static files md in 'public']
 - Pagination
 - Light/Dark mode [prefers-color-scheme]
 - prismjs [meta.load-css to load template depending on light/dark mode]
@@ -201,6 +201,41 @@ http://localhost:3000/       // server
 http://localhost:3000/posts  // endpoint 'posts'
 ```
 
+- ***.md static files**
+- json-server can serve static files in 'public' folder
+- moved content in **\public\blog** 
+- example: `\public\blog\learn\mixins.md` = `http://localhost:3000/blog/learn/mixins.md`
+- **! but error CORS in angular**
+- to fix it
+- create a file `proxy.conf.json` in your project's `src/` folder.
+```
+{
+  "/api": {
+    "target": "http://localhost:3000",
+    "secure": false,
+    "pathRewrite": {
+      "^/api": ""
+    },
+    "logLevel": "debug"
+  }
+}
+```
+- in the CLI configuration file, `angular.json`, add the `proxyConfig` option to the `serve` target:
+```
+…
+  "architect": {
+    "serve": {
+      "builder": "@angular-devkit/build-angular:dev-server",
+      "options": {
+        "proxyConfig": "src/proxy.conf.json"
+      },
+…
+```
+- use **/api/** url in components:
+```
+    this.post = `/api/blog/${cat}/${name}.md`;
+```
+
 
 
 ## Update Angular version
@@ -353,3 +388,15 @@ http://localhost:3000/posts  // endpoint 'posts'
 
 ### The Markdown Guide
 - https://www.markdownguide.org/
+
+
+### Serving static files - json-server
+- https://www.npmjs.com/package/json-server#serving-static-files
+
+
+### Proxying to a backend server - Angular
+- https://angular.io/guide/build#proxying-to-a-backend-server
+
+
+### Angular CORS Guide 🛠️ Fixing errors
+- https://dev-academy.com/angular-cors/
