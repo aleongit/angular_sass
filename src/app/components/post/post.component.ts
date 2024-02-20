@@ -25,7 +25,8 @@ export class PostComponent implements OnInit {
       const cat = params.get('cat');
       console.log(name);
       console.log(cat);
-      this.post = `/assets/blog/${cat}/${name}.md`;
+      //this.post = `api/test/test.md`;
+      this.post = `/api/blog/${cat}/${name}.md`;
       console.log(this.post);
     });
   }
