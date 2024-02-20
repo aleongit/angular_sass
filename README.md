@@ -202,6 +202,8 @@ http://localhost:3000/posts  // endpoint 'posts'
 ```
 
 - ***.md static files**
+- in angular, a new file asset (post) needs to reload/rebuild angular
+- is better way to work with static files served by backend
 - json-server can serve static files in 'public' folder
 - moved content in **\public\blog** 
 - example: `\public\blog\learn\mixins.md` = `http://localhost:3000/blog/learn/mixins.md`
