@@ -314,6 +314,12 @@ http://localhost:3000/posts  // endpoint 'posts'
 - https://angular.io/tutorial/first-app/first-app-lesson-14
 
 
+
+### API - Angular
+- https://imaginaformacion.com/tutoriales/servicios-llamadas-api-angular
+
+
+
 ### Promises vs Observables [RxJS]
 - https://stackoverflow.com/questions/37364973/what-is-the-difference-between-promises-and-observables
 - https://angular.io/guide/comparing-observables
