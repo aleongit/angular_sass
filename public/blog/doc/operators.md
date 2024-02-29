@@ -13,7 +13,7 @@ Sass supports a handful of useful *operators* for working with different values.
 - `+`, `-`, and `/` can be used to concatenate strings.
 
 
-> ⚠️ **Heads up!**
+> ⚠️ **Heads up!**<br>
 > Early on in Sass’s history, it added support for mathematical operations on colors. These operations operated on each of the colors’ RGB channels separately, so adding two colors would produce a color with the sum of their red channels as its red channel and so on.<br><br>
 This behavior wasn’t very useful, since it channel-by-channel RGB arithmetic didn’t correspond well to how humans perceive color. Color functions were added which are much more useful, and color operations were deprecated. They’re still supported in LibSass and Ruby Sass, but they’ll produce warnings and users are strongly encouraged to avoid them.
 

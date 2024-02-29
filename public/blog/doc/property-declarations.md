@@ -158,7 +158,7 @@ CSS
 ```
 
 
-> ⚠️ **Heads up!**
+> ⚠️ **Heads up!**<br>
 > Unfortunately, interpolation removes quotes from strings, which makes it difficult to use quoted strings as values for custom properties when they come from Sass variables. As a workaround, you can use the meta.inspect() function to preserve the quotes.
 
 SCSS 

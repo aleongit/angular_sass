@@ -22,7 +22,7 @@ CSS
 }
 ```
 
-> ⚠️ **Heads up!**
+> ⚠️ **Heads up!**<br>
 > CSS has variables of its own, which are totally different than Sass variables. Know the differences!
 > - Sass variables are all compiled away by Sass. CSS variables are included in the CSS output.
 > - CSS variables can have different values for different elements, but Sass variables only have one value at a time.
@@ -52,7 +52,7 @@ CSS
 }
 ```
 
-> 💡 **Fun fact**:
+> 💡 **fun fact**<br>
 > Sass variables, like all Sass identifiers, treat hyphens and underscores as identical. This means that $font-size and $font_size both refer to the same variable. This is a historical holdover from the very early days of Sass, when it only allowed underscores in identifier names. Once Sass added support for hyphens to match CSS’s syntax, the two were made equivalent to make migration easier.
 
 
@@ -210,7 +210,7 @@ CSS
 ```
 
 
-> ⚠️ **Heads up!**
+> ⚠️ **Heads up!**<br>
 > The *!global* flag may only be used to set a variable that has already been declared at the top level of a file. It may not be used to declare a new variable.
 
 
@@ -247,7 +247,7 @@ CSS
 ```
 
 
-> ⚠️ **Heads up!**
+> ⚠️ **Heads up!**<br>
 > Variables in flow control scope can assign to existing variables in the outer scope, but new variables declared in flow control scope won’t be accessible in the outer scope. Make sure the variable is already declared before you assign to it, even if you need to declare it as null.
 
 
@@ -255,7 +255,7 @@ CSS
 
 The Sass core library provides a couple advanced functions for working with variables. The *meta.variable-exists()* function returns whether a variable with the given name exists in the current scope, and the *meta.global-variable-exists()* function does the same but only for the global scope.
 
-> ⚠️ **Heads up!**
+> ⚠️ **Heads up!**<br>
 > Users occasionally want to use interpolation to define a variable name based on another variable. Sass doesn’t allow this, because it makes it much harder to tell at a glance which variables are defined where. What you can do, though, is define a map from names to values that you can then access using variables.
 
 

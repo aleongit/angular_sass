@@ -4,7 +4,7 @@ The *@use* rule loads mixins, functions, and variables from other Sass styleshee
 
 The simplest *@use* rule is written `@use "<url>"`, which loads the module at the given URL. Any styles loaded this way will be included exactly once in the compiled CSS output, no matter how many times those styles are loaded.
 
-> ⚠️ **Heads up!**
+> ⚠️ **Heads up!**<br>
 > A stylesheet’s *@use* rules must come before any rules other than *@forward*, including style rules. However, you can declare variables before *@use* rules to use when configuring modules.
 
 
@@ -58,7 +58,7 @@ You can access variables, functions, and mixins from another module by writing `
 
 Members (variables, functions, and mixins) loaded with *@use* are only visible in the stylesheet that loads them. Other stylesheets will need to write their own *@use* rules if they also want to access them. This helps make it easy to figure out exactly where each member is coming from. If you want to load members from many files at once, you can use the *@forward* rule to forward them all from one shared file.
 
-> 💡 **Fun fact**:
+> 💡 **fun fact**<br>
 > Because *@use* adds namespaces to member names, it’s safe to choose very simple names like *$radius* or *$width* when writing a stylesheet. This is different from the old *@import* rule, which encouraged that users write long names like *$mat-corner-radius* to avoid conflicts with other libraries, and it helps keep your stylesheets clear and easy to read!
 
 
@@ -156,7 +156,7 @@ CSS
 
 As a stylesheet author, you may not want all the members you define to be available outside your stylesheet. Sass makes it easy to define a private member by starting its name with either **-** or **_**. These members will work just like normal within the stylesheet that defines them, but they won’t be part of a module’s public API. That means stylesheets that load your module can’t see them!
 
-> 💡 **Fun fact**:
+> 💡 **fun fact**<br>
 > If you want to make a member private to an entire package rather than just a single module, just don’t forward its module from any of your package’s entrypoints (the stylesheets you tell your users to load to use your package). You can even hide that member while forwarding the rest of its module!
 
 
@@ -294,7 +294,7 @@ library.$color: blue;
 
 This even works if you import a module without a namespace using as `*`. Assigning to a variable name defined in that module will overwrite its value in that module.
 
-> ⚠️ **Heads up!**
+> ⚠️ **Heads up!**<br>
 > Built-in module variables (such as *math.$pi*) cannot be reassigned.
 
 
@@ -302,7 +302,7 @@ This even works if you import a module without a namespace using as `*`. Assigni
 
 It wouldn’t be any fun to write out absolute URLs for every stylesheet you load, so Sass’s algorithm for finding a module makes it a little easier. For starters, you don’t have to explicitly write out the extension of the file you want to load; `@use "variables"` will automatically load `variables.scss`, `variables.sass`, or `variables.css`.
 
-> ⚠️ **Heads up!**
+> ⚠️ **Heads up!**<br>
 > To ensure that stylesheets work on every operating system, Sass loads files by URL, not by file path. This means you need to use forward slashes, not backslashes, even on Windows.
 
 
@@ -312,7 +312,7 @@ All Sass implementations allow users to provide load paths: paths on the filesys
 
 Modules will always be loaded relative to the current file first, though. Load paths will only be used if no relative file exists that matches the module’s URL. This ensures that you can’t accidentally mess up your relative imports when you add a new library.
 
-> 💡 **Fun fact**:
+> 💡 **fun fact**<br>
 > Unlike some other languages, Sass doesn’t require that you use `./` for relative imports. Relative imports are always available.
 
 
@@ -384,7 +384,7 @@ Sass uses the pkg: URL scheme to load stylesheets distributed by various package
 
 This allows pkg: URLs and the stylesheets that use them to be portable across different language ecosystems. Whether you’re installing a Sass library via npm (for which Sass provides a built-in pkg: importer) or the most obscure package manager you can find, if you write @use 'pkg:library' it’ll do the right thing.
 
-> 💡 **Fun fact**:
+> 💡 **fun fact**<br>
 > pkg: URLs aren’t just for *@use*. You can use them anywhere you can load a Sass file, including *@forward*, *meta.load-css()*, and even the old *@import* rule.
 
 

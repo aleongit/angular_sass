@@ -47,7 +47,7 @@ nav ul li {
 ```
 
 
-> 💡 **Fun fact**:
+> 💡 **fun fact**<br>
 > Mixin names, like all Sass identifiers, treat hyphens and underscores as identical. This means that *reset-list* and *reset_list* both refer to the same mixin. This is a historical holdover from the very early days of Sass, when it only allowed underscores in identifier names. Once Sass added support for hyphens to match CSS’s syntax, the two were made equivalent to make migration easier.
 
 
@@ -81,7 +81,7 @@ CSS
 }
 ```
 
-> 💡 **Fun fact**:
+> 💡 **fun fact**<br>
 > Argument lists can also have trailing commas! This makes it easier to avoid syntax errors when refactoring your stylesheets.
 
 
@@ -121,7 +121,7 @@ CSS
 }
 ```
 
-> 💡 **Fun fact**:
+> 💡 **fun fact**<br>
 > Default values can be any SassScript expression, and they can even refer to earlier arguments!
 
 
@@ -155,7 +155,7 @@ CSS
 }
 ```
 
-> ⚠️ **Heads up!**
+> ⚠️ **Heads up!**<br>
 > Because any argument can be passed by name, be careful when renaming a mixin’s arguments… it might break your users! It can be helpful to keep the old name around as an optional argument for a while and printing a warning if anyone passes it, so they know to migrate to the new argument.
 
 
@@ -245,7 +245,7 @@ pre span.stx-variable {
 ```
 
 
-> 💡 **Fun fact**:
+> 💡 **fun fact**<br>
 > If you don’t ever pass an argument list to the **meta.keywords()** function, that argument list won’t allow extra keyword arguments. This helps callers of your mixin make sure they haven’t accidentally misspelled any argument names.
 
 
@@ -262,7 +262,7 @@ $form-selectors: "input.name", "input.address", "input.zip" !default;
 @include order(150px, $form-selectors...);
 ```
 
-> 💡 **Fun fact**:
+> 💡 **fun fact**<br>
 > Because an argument list keeps track of both positional and keyword arguments, you use it to pass both at once to another mixin. That makes it super easy to define an alias for a mixin!
 
 
@@ -304,10 +304,10 @@ CSS
 }
 ```
 
-> 💡 **Fun fact**:
+> 💡 **fun fact**<br>
 > A mixin can include multiple *@content* at-rules. If it does, the content block will be included separately for each *@content*.
 
-> ⚠️ **Heads up!**
+> ⚠️ **Heads up!**<br>
 > A content block is lexically scoped, which means it can only see local variables in the scope where the mixin is included. It can’t see any variables that are defined in the mixin it’s passed to, even if they’re defined before the content block is invoked.
 
 
@@ -317,7 +317,7 @@ CSS
 
 A mixin can pass arguments to its content block the same way it would pass arguments to another mixin by writing `@content(<arguments...>)`. The user writing the content block can accept arguments by writing `@include <name> using (<arguments...>)`. The argument list for a content block works just like a mixin’s argument list, and the arguments passed to it by `@content` work just like passing arguments to a mixin.
 
-> ⚠️ **Heads up!**
+> ⚠️ **Heads up!**<br>
 If a mixin passes arguments to its content block, that content block must declare that it accepts those arguments. This means that it’s a good idea to only pass arguments by position (rather than by name), and it means that passing more arguments is a breaking change.
 
 If you want to be flexible in what information you pass to a content block, consider passing it a map that contains information it may need!

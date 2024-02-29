@@ -6,7 +6,7 @@ The rule is written `@forward "<url>"`. It loads the module at the given URL jus
 
 If you do write both a **@forward** and a **@use** for the same module in the same file, it’s always a good idea to write the **@forward** first. That way, if your users want to configure the forwarded module, that configuration will be applied to the **@forward** before your **@use** loads it without any configuration.
 
-> 💡 **Fun fact**:
+> 💡 **fun fact**<br>
 > The **@forward** rule acts just like **@use** when it comes to a module’s CSS. Styles from a forwarded module will be included in the compiled CSS output, and the module with the **@forward** can extend it, even if it isn’t also **@used**.
 
 

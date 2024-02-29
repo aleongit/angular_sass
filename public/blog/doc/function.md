@@ -30,17 +30,17 @@ CSS
 }
 ```
 
-> 💡 **Fun fact**:
+> 💡 **fun fact**<br>
 > Function names, like all Sass identifiers, treat hyphens and underscores as identical. This means that scale-color and scale_color both refer to the same function. This is a historical holdover from the very early days of Sass, when it only allowed underscores in identifier names. Once Sass added support for hyphens to match CSS’s syntax, the two were made equivalent to make migration easier.
 
-> ⚠️ **Heads up!**
+> ⚠️ **Heads up!**<br>
 > While it’s technically possible for functions to have side-effects like setting global variables, this is strongly discouraged. Use mixins for side-effects, and use functions just to compute values.
 
 
 ### Arguments
 Arguments allow functions’ behavior to be customized each time they’re called. The arguments are specified in the **@function** rule after the function’s name, as a list of variable names surrounded by parentheses. The function must be called with the same number of arguments in the form of SassScript expressions. The values of these expression are available within the function’s body as the corresponding variables.
 
-> 💡 **Fun fact**:
+> 💡 **fun fact**<br>
 > Argument lists can also have trailing commas! This makes it easier to avoid syntax errors when refactoring your stylesheets.
 
 
@@ -95,7 +95,7 @@ CSS
 }
 ```
 
-> ⚠️ **Heads up!**
+> ⚠️ **Heads up!**<br>
 > Because any argument can be passed by name, be careful when renaming a function’s arguments… it might break your users! It can be helpful to keep the old name around as an optional argument for a while and printing a warning if anyone passes it, so they know to migrate to the new argument.
 
 
@@ -132,7 +132,7 @@ CSS
 
 Argument lists can also be used to take arbitrary keyword arguments. The *meta.keywords()* function takes an argument list and returns any extra keywords that were passed to the function as a map from argument names (not including $) to those arguments’ values.
 
-> 💡 **Fun fact**:
+> 💡 **fun fact**<br>
 > If you don’t ever pass an argument list to the *meta.keywords()* function, that argument list won’t allow extra keyword arguments. This helps callers of your function make sure they haven’t accidentally misspelled any argument names.
 
 
@@ -155,7 +155,7 @@ CSS
 }
 ```
 
-> 💡 **Fun fact**:
+> 💡 **fun fact**<br>
 > Because an argument list keeps track of both positional and keyword arguments, you use it to pass both at once to another function. That makes it super easy to define an alias for a function!
 
 
@@ -209,8 +209,8 @@ $accent: #e1d7d2;
 @debug radial-gradient($primary, $accent); // radial-gradient(#f2ece4, #e1d7d2)
 ```
 
-> ⚠️ **Heads up!**
+> ⚠️ **Heads up!**<br>
 > Because any unknown function will be compiled to CSS, it’s easy to miss when you typo a function name. Consider running a CSS linter on your stylesheet’s output to be notified when this happens!
 
-> 💡 **Fun fact**:
+> 💡 **fun fact**<br>
 > Some CSS functions, like **calc()** and **element()** have unusual syntax. Sass parses these functions specially as unquoted strings.

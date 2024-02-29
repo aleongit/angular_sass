@@ -44,7 +44,7 @@ CSS
 
 
 
-> ⚠️ **Heads up!**
+> ⚠️ **Heads up!**<br>
 > Because the parent selector could be replaced by a type selector like *h1*, it’s only allowed at the beginning of compound selectors where a type selector would also be allowed. For example, *span&* is not allowed.
 
 We’re looking into loosening this restriction, though. If you’d like to help make that happen, check out this GitHub issue.

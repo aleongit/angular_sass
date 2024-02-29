@@ -61,7 +61,7 @@ nav a {
 }
 ```
 
-> ⚠️ **Heads up!**
+> ⚠️ **Heads up!**<br>
 > Nested rules are super helpful, but they can also make it hard to visualize how much CSS you’re actually generating. The deeper you nest, the more bandwidth it takes to serve your CSS and the more work it takes the browser to render it. Keep those selectors shallow!
 
 
@@ -163,7 +163,7 @@ span.emoji-women-holding-hands {
 }
 ```
 
-> 💡  **Fun fact**
+> 💡  **Fun fact**<br>
 > Sass only parses selectors after interpolation is resolved. This means you can safely use interpolation to generate any part of the selector without worrying that it won’t parse.
 
 You can combine interpolation with the parent selector &, the @at-root rule, and selector functions to wield some serious power when dynamically generating selectors. For more information, see the parent selector documentation.
