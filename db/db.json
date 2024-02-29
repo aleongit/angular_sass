@@ -181,6 +181,13 @@
       "title": "@function",
       "description": "Functions allow you to define complex operations on SassScript values that you can re-use throughout your stylesheet. They make it easy to abstract out common formulas and behaviors in a readable way",
       "category": "doc"
+    },
+    {
+      "id": 27,
+      "name": "extend",
+      "title": "@extend",
+      "description": "There are often cases when designing a page when one class should have all the styles of another class, as well as its own specific styles",
+      "category": "doc"
     }
   ]
 }
