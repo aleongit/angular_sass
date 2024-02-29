@@ -188,6 +188,27 @@
       "title": "@extend",
       "description": "There are often cases when designing a page when one class should have all the styles of another class, as well as its own specific styles",
       "category": "doc"
+    },
+    {
+      "id": 28,
+      "name": "error",
+      "title": "@error",
+      "description": "When writing mixins and functions that take arguments, you usually want to ensure that those arguments have the types and formats your API expects",
+      "category": "doc"
+    },
+    {
+      "id": 29,
+      "name": "warn",
+      "title": "@warn",
+      "description": "When writing mixins and functions, you may want to discourage users from passing certain arguments or certain values",
+      "category": "doc"
+    },
+    {
+      "id": 30,
+      "name": "debug",
+      "title": "@debug",
+      "description": "Sometimes it’s useful to see the value of a variable or expression while you’re developing your stylesheet",
+      "category": "doc"
     }
   ]
 }
