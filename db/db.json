@@ -209,6 +209,13 @@
       "title": "@debug",
       "description": "Sometimes it’s useful to see the value of a variable or expression while you’re developing your stylesheet",
       "category": "doc"
+    },
+    {
+      "id": 31,
+      "name": "flow-control",
+      "title": "Flow Control",
+      "description": "Sass provides a number of at-rules that make it possible to control whether styles get emitted, or to emit them multiple times with small variations",
+      "category": "doc"
     }
   ]
 }
