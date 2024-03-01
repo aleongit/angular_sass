@@ -219,14 +219,42 @@
     },
     {
       "id": 32,
+      "name": "numbers",
+      "title": "Numbers",
+      "description": "Numbers in Sass have two components: the number itself, and its units",
+      "category": "doc"
+    },
+    {
+      "id": 33,
+      "name": "strings",
+      "title": "Strings",
+      "description": "Sass supports two kinds of strings: quoted strings and unquoted strings (also known as identifiers)",
+      "category": "doc"
+    },
+    {
+      "id": 34,
+      "name": "lists",
+      "title": "lists",
+      "description": "Lists contain a sequence of other values. In Sass, elements in lists can be separated by commas, spaces, or slashes as long as it’s consistent within the list",
+      "category": "doc"
+    },
+    {
+      "id": 35,
       "name": "maps",
       "title": "maps",
       "description": "Maps in Sass hold pairs of keys and values, and make it easy to look up a value by its corresponding key",
       "category": "doc"
     },
     {
-      "id": 33,
-      "name": "sas-map",
+      "id": 36,
+      "name": "sass-list",
+      "title": "sass:list",
+      "description": "The sass:list module lets you access and modify values in lists",
+      "category": "doc"
+    },
+    {
+      "id": 37,
+      "name": "sass-map",
       "title": "sass:map",
       "description": "The sass:map module makes it possible to look up the value associated with a key in a map, and much more",
       "category": "doc"
