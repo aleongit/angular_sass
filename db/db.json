@@ -258,6 +258,13 @@
       "title": "sass:map",
       "description": "The sass:map module makes it possible to look up the value associated with a key in a map, and much more",
       "category": "doc"
+    },
+    {
+      "id": 38,
+      "name": "sass-string",
+      "title": "sass:string",
+      "description": "The sass:string module makes it easy to combine, search, or split apart strings",
+      "category": "doc"
     }
   ]
 }
