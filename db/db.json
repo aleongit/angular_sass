@@ -216,6 +216,13 @@
       "title": "Flow Control",
       "description": "Sass provides a number of at-rules that make it possible to control whether styles get emitted, or to emit them multiple times with small variations",
       "category": "doc"
+    },
+    {
+      "id": 32,
+      "name": "sas-map",
+      "title": "sass:map",
+      "description": "The sass:map module makes it possible to look up the value associated with a key in a map, and much more",
+      "category": "doc"
     }
   ]
 }
