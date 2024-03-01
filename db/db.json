@@ -219,6 +219,13 @@
     },
     {
       "id": 32,
+      "name": "maps",
+      "title": "maps",
+      "description": "Maps in Sass hold pairs of keys and values, and make it easy to look up a value by its corresponding key",
+      "category": "doc"
+    },
+    {
+      "id": 33,
       "name": "sas-map",
       "title": "sass:map",
       "description": "The sass:map module makes it possible to look up the value associated with a key in a map, and much more",
