@@ -408,3 +408,24 @@ http://localhost:3000/posts  // endpoint 'posts'
 
 ### Angular CORS Guide 🛠️ Fixing errors
 - https://dev-academy.com/angular-cors/
+
+
+### :nth-child
+- https://developer.mozilla.org/en-US/docs/Web/CSS/:nth-child
+- https://stackoverflow.com/questions/5428676/nth-child-doesnt-respond-to-class
+- https://stackoverflow.com/questions/50974471/sass-function-to-iterate-nth-childn1-and-lighten-darkencolor-5n
+- https://paulund.co.uk/nth-child-sass-mixins
+- https://coderwall.com/p/11z75g/iterating-over-nth-children-w-sass
+
+
+### lighten()
+- https://sass-lang.com/documentation/modules/color/#lighten
+
+
+### Generate variables from a loop using SASS
+- https://stackoverflow.com/questions/57250528/scss-sass-how-to-create-variables-inside-an-each-loop
+
+
+### How to Truncate Multi-Line String with Pure CSS
+- https://www.w3docs.com/snippets/css/how-to-truncate-multi-line-string-with-pure-css.html
+- https://stackoverflow.com/questions/5269713/css-ellipsis-on-second-line

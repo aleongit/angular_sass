@@ -1,0 +1,28 @@
+/* funció que retorna nou color amb lighten(), així puc fer debug de variable nou color, dins for de mixin no es pot*/
+@function get-lighten($color, $amount) {
+  $color-lighten: lighten($color, $amount);
+  @debug $color-lighten;
+  @return $color-lighten;
+}
+
+/* mixin degradar progressivament n elements, per exemple <li>, nth-child no funciona amb classes */
+@mixin lighten-background($color) {
+  @for $i from 1 through 10 {
+    &:nth-child(#{$i}) {
+      background-color: get-lighten($color, ($i - 1) * 5%);
+      @debug $i;
+    }
+  }
+}
+
+// ______________________________
+
+/* mixin afegir '...' per n línies > 1 */
+@mixin truncate-lines($lines: 1) {
+  @if $lines > 1 {
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: $lines;
+    overflow: hidden;
+  }
+}

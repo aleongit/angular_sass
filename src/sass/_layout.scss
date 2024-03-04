@@ -128,6 +128,10 @@
     float: left;
     margin-right: 1rem;
     margin-bottom: $spacing-unit;
+    border-radius: 10px;
+
+    //mixin per fer degradat color per cada <li> de .post-list amb :nth-child
+    @include lighten-background($brand-color-light);
   }
 
   @include media-query($on-palm) {
@@ -138,8 +142,6 @@
 .post-link {
   display: block;
   padding: $spacing-unit;
-  //background-color: aliceblue;
-  border-radius: 30px;
   max-width: 275px;
   min-width: 275px;
   height: 250px;
@@ -150,15 +152,15 @@
     height: auto;
   }
 
-  //color per categoria
+  //per categoria
   &.category-learn {
-    background-color: aliceblue;
+    //background-color: aliceblue;
     @include relative-font-size(1.5);
   }
 
   &.category-doc {
-    background-color: rgb(227, 239, 250);
-    @include relative-font-size(1.2);
+    //background-color: rgb(227, 239, 250);
+    @include relative-font-size(1.5);
   }
 
   //spans
@@ -169,6 +171,9 @@
 
   & .__description {
     display: block;
+
+    //mixin posa '...' per número línies / exemple = 5
+    @include truncate-lines(5);
   }
 
   &:hover {
